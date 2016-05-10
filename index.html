@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Code Review</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome-min.css">
+    <link href="font-awesome/css/font-awesome-min.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -21,7 +22,7 @@
 
       <form class="signup" action="index.html" method="post">
 
-        <fieldset>
+        <fieldset class="contact-info">
 
           <legend>
             <i class="fa fa-home fa-2x" aria-hidden="true"></i>
@@ -116,16 +117,76 @@
 
         </fieldset>
 
-        <fieldset>
+        <fieldset class="newsletter">
 
           <legend>
             <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i>
-            Newsletter Information
+            Newsletter
           </legend>
-          
+
+          <h2 class="news-caption">Select the newsletters you would like to receive from the choices below!</h2>
+
+          <div class="group-interests">
+
+            <div class="form-item">
+              <input id="option3" type="checkbox" name="field" value="option3"><label for="option3"><span class="check-box"></span> Javascript</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option" type="checkbox" name="field" value="option"><label for="option"><span class="check-box"></span> Design</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option2" type="checkbox" name="field" value="option2"><label for="option2"><span class="check-box"></span> HTML</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option4" type="checkbox" name="field" value="option4"><label for="option4"><span class="check-box"></span> CSS</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option5" type="checkbox" name="field" value="option5"><label for="option5"><span class="check-box"></span> Python</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option6" type="checkbox" name="field" value="option6"><label for="option6"><span class="check-box"></span> Ruby</label>
+            </div>
+
+          </div>
+
+
+          <h2 class="news-caption">Which format would you like us to send the newsletter in?</h2>
+
+          <div class="group-format">
+
+            <div class="form-item">
+              <input id="radio1" type="radio" name="radio" value="1"><label for="radio1">
+              <span class="radio-bg">
+                <span class="radio-select"></span>
+              </span> HTML</label>
+            </div>
+
+            <div class="form-item">
+              <input id="radio2" type="radio" name="radio" value="2"><label for="radio2">
+              <span class="radio-bg">
+                <span class="radio-select"></span>
+              </span> Plain Text</label>
+            </div>
+
+          </div>
+
+          <div class="form-item">
+            <label for="more-interests">Other topics you'd like to hear about</label>
+            <textarea id="more-interests" name="user_interest_extra"
+              placeholder="&#xf0e6; We'd love to hear suggestions for new things to share with you!"></textarea>
+          </div>
+
         </fieldset>
 
-        <button type="reset">Reset</button>
+        <div class="group-btn">
+          <button class="btn submit" type="submit">Sign Up</button>
+          <button class="btn cancel" type="reset">Reset</button>
+        </div>
 
       </form> <!-- SIGNUP FORM END  -->
     </div>    <!-- MAIN-WRAPPER END -->

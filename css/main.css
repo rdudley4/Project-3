@@ -12,6 +12,8 @@ body {
   padding-right : 1.5em;
 }
 
+.signup { margin-bottom: 40px; }
+
 
 /* Main-Header Styles */
 
@@ -27,10 +29,10 @@ body {
 .main-header:after {
   content          : ' ';
   position         : absolute;
-  border           : 30px solid transparent;
-  border-top-color : #34495e;
   bottom           : -60px;
   transform        : translateX(-50%);
+  border           : 30px solid transparent;
+  border-top-color : #34495e;
 }
 
 .main-title,
@@ -39,11 +41,12 @@ body {
 .main-title       { text-transform: uppercase; }
 .newsletter-title { margin-bottom: .3em; }
 
-.newsletter-title-info {
-  margin    : 0;
-  font-size : .9em;
-}
+.newsletter-title-info { margin: 0; }
 
+textarea,
+.news-caption,
+.newsletter-title-info,
+label[for="more-interests"] { font-size: .9em; }
 
 
 /* Form Styles */
@@ -61,20 +64,57 @@ legend {
   color      : #34495e;
 }
 
+.btn {
+  float            : left;
+  width            : 47.5%;
+  margin-right     : 2.5%;
+  padding          : 15px;
+  color            : #fff;
+  background-color : #34495e;
+  border           : none;
+  border-bottom    : 2px solid #2c3e50;
+  border-radius    : .3em;
+}
+
+.btn.cancel {
+  margin-left  : 2.5%;
+  margin-right : 0;
+}
+
+.btn.submit:hover {
+  background-color : #2ecc71;
+  border-bottom    : 2px solid #27ae60;
+}
+
+.btn.cancel:hover {
+  background-color : #e74c3c;
+  border-bottom    : 2px solid #c0392b;
+}
+
+.btn,
+.btn.submit:hover,
+.btn.cancel:hover { transition: background-color .4s ease, border-bottom .4s ease; }
+
+.contact-info label,
+label[for="more-interests"] {
+  display       : block;
+  margin-top    : 20px;
+  margin-bottom : 10px;
+}
+
+
 .fa-home,
 .fa-newspaper-o { display: block; }
 
-.form-item > label,
-label[for="select-state"] {
-  display       : block;
-  margin-top    : 10px;
-  margin-bottom : 5px;
+textarea {
+  width  : 100%;
+  resize : vertical;
 }
-
 
 input[type="text"  ],
 input[type="email" ],
 input[type="tel"   ],
+textarea,
 select {
   width         : 100%;
   padding       : 15px;
@@ -97,4 +137,143 @@ select:focus {
 select:-moz-focusring {
     color       : transparent;
     text-shadow : 0 0 0 #000;
+}
+
+/* Newsletter Section */
+
+.group-btn,
+.group-format,
+.group-interests { overflow: hidden; }
+
+.group-interests .form-item,
+.group-format .form-item {
+  float      : left;
+  clear      : left;
+  padding    : 5px;
+  box-sizing : content-box;
+}
+
+.newsletter .form-item:nth-of-type(even) {
+  float: right;
+  clear: right;
+}
+
+.group-interests .form-item:last-of-type,
+.group-interests .form-item:nth-of-type(4) { width: 96.95px; }
+
+.news-caption { text-align : justify; }
+
+.news-caption:nth-of-type(2) {
+  clear      : left;
+  margin-top : 20px;
+}
+
+.group-btn { margin-bottom: 40px; }
+
+/* SHARED RADIO/CHECKBOX STYLING */
+
+/* Hide default radio and checkbox styling */
+input[type="checkbox"]:not(old),
+input[type="radio"   ]:not(old) {
+  margin    : 0;
+  padding   : 0;
+  font-size : 2em;
+  opacity   : 0;
+}
+
+/* default label text styles */
+input[type="checkbox"]:not(old) + label,
+input[type="radio"   ]:not(old) + label {
+  display        : inline-block;
+  margin-left    : -13px;
+  text-transform : uppercase;
+  line-height    : 24px;
+  transition     : color .4s ease;
+}
+
+input[type="checkbox"]:not(old) + label:hover,
+input[type="radio"   ]:not(old) + label:hover {
+  cursor: pointer;
+}
+
+/* default checked style for label text */
+input[type="checkbox"]:not(old):checked + label,
+input[type="radio"   ]:not(old):checked + label {
+  color: #27ae60;
+}
+
+/* Unchecked default styles for both radio and check-box */
+input[type="checkbox"]:not(old) + label > .check-box,
+input[type="radio"   ]:not(old) + label > .radio-bg {
+  position       : relative;
+  display        : inline-block;
+  width          : 1.5em;
+  height         : 1.5em;
+  margin-right   : 5px;
+  border         : solid 2px rgba(52, 73, 94, .8);
+  border-radius  : 50%;
+  vertical-align : bottom;
+  transition     : border-color .4s ease;
+}
+
+/*   CHECKBOX SPECIFIC STYLING
+
+     Checked check-box Styling     */
+
+input[type="checkbox"]:not(old):checked + label > .check-box:before {
+  content     : '✓';
+  position    : absolute;
+  transform   : translate(20%, 18%);
+  display     : block;
+  width       : 1em;
+  color       : #2ecc71;
+  line-height : 1em;
+  font-weight : bold;
+}
+
+
+input[type="checkbox"]:not(old):checked + label > .check-box {
+  border-color : #2ecc71;
+  transition   : border-color .2s ease;
+}
+
+/*   RADIO SPECIFIC STYLING
+
+     Checked Radio Button Styling     */
+
+input[type="radio"]:not(old):checked + label > .radio-bg > .radio-select {
+  display          : block;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  width            : 1em;
+  height           : 1em;
+  background-color : #2ecc71;
+  border-radius    : 50%;
+  transition       : background-color .6s ease;
+  transform        : translate(12%, 12%);
+}
+
+input[type="radio"]:not(old):checked + label > .radio-bg {
+  border-color : #2ecc71;
+  transition   : border-color .6s ease;
+}
+
+@media (min-width: 400px) {
+
+  /* Newsletter tablet styling */
+  .group-btn,
+  .group-format,
+  .group-interests,
+  .news-caption,
+  .newsletter > .form-item:last-of-type {
+    max-width : 500px;
+    margin    : 0 auto;
+  }
+
+  .news-caption {
+    margin-top    : 10px;
+    margin-bottom : 10px;
+  }
+
 }
