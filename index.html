@@ -11,14 +11,14 @@
   </head>
   <body>
 
-    <header class="main-header">
-      <h1 class="main-title">The Code Review</h1>
-      <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
-      <h2 class="newsletter-title">Signup for our newsletter</h2>
-      <p class="newsletter-title-info">Get the latest news on how your code is doing right in your inbox.</p>
-    </header>
+    <div class="main-container">
 
-    <div class="container-main">
+      <header class="main-header">
+        <h1 class="main-title">The Code Review</h1>
+        <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
+        <h2 class="newsletter-title">Signup for our newsletter</h2>
+        <p class="newsletter-title-info">Get the latest news on how your code is doing right in your inbox.</p>
+      </header>
 
       <form class="signup" action="index.html" method="post">
 
@@ -181,15 +181,16 @@
               placeholder="&#xf0e6; We'd love to hear suggestions for new things to share with you!"></textarea>
           </div>
 
+          <div class="group-btn">
+            <button class="btn submit" type="submit">Sign Up</button>
+            <button class="btn cancel" type="reset">Reset</button>
+          </div>
+
         </fieldset>
 
-        <div class="group-btn">
-          <button class="btn submit" type="submit">Sign Up</button>
-          <button class="btn cancel" type="reset">Reset</button>
-        </div>
+      </form> <!-- SIGNUP FORM END          -->
 
-      </form> <!-- SIGNUP FORM END  -->
-    </div>    <!-- MAIN-WRAPPER END -->
+    </div>    <!-- CONTAINER BOX-SHADOW END -->
 
   </body>
 </html>

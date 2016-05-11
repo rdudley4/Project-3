@@ -7,20 +7,11 @@ body {
   background-color : #ecf0f1;
 }
 
-.container-main {
-  padding-left  : 1.5em;
-  padding-right : 1.5em;
-}
-
-.signup { margin-bottom: 40px; }
-
-
 /* Main-Header Styles */
 
 .main-header {
   position         : relative;
   padding          : 15px;
-  margin-bottom    : 60px;
   text-align       : center;
   color            : #fff;
   background-color : #34495e;
@@ -53,7 +44,7 @@ label[for="more-interests"] { font-size: .9em; }
 
 fieldset {
   padding : 0;
-  margin  : 0 0 50px;
+  margin  : 0;
   border  : none;
 }
 
@@ -62,6 +53,12 @@ legend {
   font-size  : 1.125em;
   text-align : center;
   color      : #34495e;
+}
+
+.signup {
+  background     : #ecf0f1;
+  padding-top    : 50px;
+  padding-bottom : 50px;
 }
 
 .btn {
@@ -124,13 +121,14 @@ select {
   font-family   : 'FontAwesome', 'Montserrat', sans-serif;
   color         : #34495e;
   transition    : transform .4s ease;
+  /*-webkit-appearance:none;*/
 }
 
 input[type="text"  ]:focus,
 input[type="email" ]:focus,
 input[type="tel"   ]:focus,
 select:focus {
-  transform  : scale(1.1);
+  transform  : scale(1.05);
   transition : transform .4s ease;
 }
 
@@ -161,14 +159,14 @@ select:-moz-focusring {
 .group-interests .form-item:last-of-type,
 .group-interests .form-item:nth-of-type(4) { width: 96.95px; }
 
-.news-caption { text-align : justify; }
-
-.news-caption:nth-of-type(2) {
-  clear      : left;
+.news-caption {
   margin-top : 20px;
+  text-align : justify;
 }
 
-.group-btn { margin-bottom: 40px; }
+.news-caption:nth-of-type(2) { clear: left;}
+
+.group-btn { margin-top: 40px; }
 
 /* SHARED RADIO/CHECKBOX STYLING */
 
@@ -259,21 +257,48 @@ input[type="radio"]:not(old):checked + label > .radio-bg {
   transition   : border-color .6s ease;
 }
 
+@media (max-width: 550px) {
+  .signup {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+  }
+}
+
 @media (min-width: 400px) {
 
   /* Newsletter tablet styling */
-  .group-btn,
-  .group-format,
-  .group-interests,
-  .news-caption,
-  .newsletter > .form-item:last-of-type {
+  .newsletter,
+  .contact-info {
     max-width : 500px;
-    margin    : 0 auto;
+    margin    : 0 auto 50px;
   }
 
-  .news-caption {
-    margin-top    : 10px;
-    margin-bottom : 10px;
+  .newsletter { margin-bottom: 0; }
+
+}
+
+
+@media (min-width: 768px) {
+
+  .main-container {
+    max-width  : 750px;
+    margin     : 0 auto;
+    border-radius: .3em;
+    box-shadow: 0px 0px 26px 1px rgba(0,0,0,0.25);
   }
+
+  .main-header {
+    margin-top              : 25px;
+    border-top-left-radius  : .3em;
+    border-top-right-radius : .3em;
+  }
+
+
+  .signup {
+    margin-bottom              : 25px;
+    border-bottom-left-radius  : .3em;
+    border-bottom-right-radius : .3em;
+  }
+
 
 }
