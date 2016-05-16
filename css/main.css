@@ -1,29 +1,39 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family      : 'Montserrat', sans-serif;
-  line-height      : 1.5;
   color            : #7f8c8d;
   background-color : #ecf0f1;
+
+  font-family      : 'Montserrat', sans-serif;
+  line-height      : 1.5;
 }
+
+.overflow-container { overflow: hidden; }
 
 /* Main-Header Styles */
 
 .main-header {
   position         : relative;
+
   padding          : 15px;
+
   text-align       : center;
+
   color            : #fff;
   background-color : #34495e;
 }
 
 .main-header:after {
-  content          : ' ';
-  position         : absolute;
-  bottom           : -60px;
-  transform        : translateX(-50%);
-  border           : 30px solid transparent;
-  border-top-color : #34495e;
+  position          : absolute;
+  bottom            : -60px;
+
+  content           : ' ';
+  -webkit-transform : translateX(-50%);
+  -ms-transform     : translateX(-50%);
+  transform         : translateX(-50%);
+
+  border            : 30px solid transparent;
+  border-top-color  : #34495e;
 }
 
 .main-title,
@@ -43,69 +53,76 @@ label[for="more-interests"] { font-size: .9em; }
 /* Form Styles */
 
 fieldset {
-  padding : 0;
   margin  : 0;
+  padding : 0;
   border  : none;
 }
 
 legend {
   width      : 100%;
-  font-size  : 1.125em;
   text-align : center;
   color      : #34495e;
+  font-size  : 1.125em;
 }
 
 .signup {
-  background     : #ecf0f1;
   padding-top    : 50px;
   padding-bottom : 50px;
+
+  background     : #ecf0f1;
 }
 
 .btn {
   float            : left;
+
   width            : 47.5%;
   margin-right     : 2.5%;
   padding          : 15px;
+
   color            : #fff;
-  background-color : #34495e;
   border           : none;
   border-bottom    : 2px solid #2c3e50;
   border-radius    : .3em;
+  background-color : #34495e;
 }
 
-.btn.cancel {
-  margin-left  : 2.5%;
+.cancel {
   margin-right : 0;
+  margin-left  : 2.5%;
 }
 
-.btn.submit:hover {
-  background-color : #2ecc71;
+.submit:hover {
   border-bottom    : 2px solid #27ae60;
+  background-color : #2ecc71;
 }
 
-.btn.cancel:hover {
-  background-color : #e74c3c;
+.cancel:hover {
   border-bottom    : 2px solid #c0392b;
+  background-color : #e74c3c;
 }
 
 .btn,
-.btn.submit:hover,
-.btn.cancel:hover { transition: background-color .4s ease, border-bottom .4s ease; }
+.submit:hover,
+.cancel:hover { transition: background-color .4s ease, border-bottom .4s ease; }
+
+.contact-info { margin-bottom: 50px; }
 
 .contact-info label,
 label[for="more-interests"] {
   display       : block;
+
   margin-top    : 20px;
   margin-bottom : 10px;
 }
-
 
 .fa-home,
 .fa-newspaper-o { display: block; }
 
 textarea {
-  width  : 100%;
-  resize : vertical;
+  width      : 100%;
+  min-height : 100px;
+
+  resize     : vertical;
 }
 
 input[type="text"  ],
@@ -115,12 +132,14 @@ textarea,
 select {
   width         : 100%;
   padding       : 15px;
-  border-radius : .3em;
-  border        : 1px solid #ccc;
-  outline       : none;
-  font-family   : 'FontAwesome', 'Montserrat', sans-serif;
-  color         : #34495e;
+
   transition    : transform .4s ease;
+
+  color         : #34495e;
+  border        : 1px solid #ccc;
+  border-radius : .3em;
+
+  font-family   : 'FontAwesome', 'Montserrat', sans-serif;
   /*-webkit-appearance:none;*/
 }
 
@@ -128,8 +147,8 @@ input[type="text"  ]:focus,
 input[type="email" ]:focus,
 input[type="tel"   ]:focus,
 select:focus {
-  transform  : scale(1.05);
   transition : transform .4s ease;
+  transform  : scale(1.05);
 }
 
 select:-moz-focusring {
@@ -147,8 +166,9 @@ select:-moz-focusring {
 .group-format .form-item {
   float      : left;
   clear      : left;
-  padding    : 5px;
+
   box-sizing : content-box;
+  padding    : 5px;
 }
 
 .newsletter .form-item:nth-of-type(even) {
@@ -164,7 +184,7 @@ select:-moz-focusring {
   text-align : justify;
 }
 
-.news-caption:nth-of-type(2) { clear: left;}
+.news-caption:nth-of-type(2) { clear: left; }
 
 .group-btn { margin-top: 40px; }
 
@@ -175,18 +195,23 @@ input[type="checkbox"]:not(old),
 input[type="radio"   ]:not(old) {
   margin    : 0;
   padding   : 0;
-  font-size : 2em;
+
   opacity   : 0;
+
+  font-size : 2em;
 }
 
 /* default label text styles */
 input[type="checkbox"]:not(old) + label,
 input[type="radio"   ]:not(old) + label {
   display        : inline-block;
+
   margin-left    : -13px;
-  text-transform : uppercase;
-  line-height    : 24px;
+
   transition     : color .4s ease;
+  text-transform : uppercase;
+
+  line-height    : 24px;
 }
 
 input[type="checkbox"]:not(old) + label:hover,
@@ -204,14 +229,18 @@ input[type="radio"   ]:not(old):checked + label {
 input[type="checkbox"]:not(old) + label > .check-box,
 input[type="radio"   ]:not(old) + label > .radio-bg {
   position       : relative;
+
   display        : inline-block;
+
   width          : 1.5em;
   height         : 1.5em;
   margin-right   : 5px;
+
+  transition     : border-color .4s ease;
+  vertical-align : bottom;
+
   border         : solid 2px rgba(52, 73, 94, .8);
   border-radius  : 50%;
-  vertical-align : bottom;
-  transition     : border-color .4s ease;
 }
 
 /*   CHECKBOX SPECIFIC STYLING
@@ -219,20 +248,25 @@ input[type="radio"   ]:not(old) + label > .radio-bg {
      Checked check-box Styling     */
 
 input[type="checkbox"]:not(old):checked + label > .check-box:before {
-  content     : '✓';
   position    : absolute;
-  transform   : translate(20%, 18%);
+
   display     : block;
+
   width       : 1em;
+
+  content     : '✓';
+  transform   : translate(20%, 18%);
+
   color       : #2ecc71;
-  line-height : 1em;
+
   font-weight : bold;
+  line-height : 1em;
 }
 
 
 input[type="checkbox"]:not(old):checked + label > .check-box {
-  border-color : #2ecc71;
   transition   : border-color .2s ease;
+  border-color : #2ecc71;
 }
 
 /*   RADIO SPECIFIC STYLING
@@ -240,40 +274,45 @@ input[type="checkbox"]:not(old):checked + label > .check-box {
      Checked Radio Button Styling     */
 
 input[type="radio"]:not(old):checked + label > .radio-bg > .radio-select {
-  display          : block;
   position         : absolute;
   top              : 0;
   left             : 0;
+
+  display          : block;
+
   width            : 1em;
   height           : 1em;
-  background-color : #2ecc71;
-  border-radius    : 50%;
+
   transition       : background-color .6s ease;
   transform        : translate(12%, 12%);
+
+  border-radius    : 50%;
+  background-color : #2ecc71;
 }
 
 input[type="radio"]:not(old):checked + label > .radio-bg {
-  border-color : #2ecc71;
   transition   : border-color .6s ease;
+  border-color : #2ecc71;
 }
+
+
 
 @media (max-width: 550px) {
   .signup {
-    padding-left: 1.25em;
-    padding-right: 1.25em;
+    padding-right : 1.25em;
+    padding-left  : 1.25em;
   }
 }
 
 @media (min-width: 400px) {
 
-  /* Newsletter tablet styling */
+  /* tablet styling */
   .newsletter,
   .contact-info {
-    max-width : 500px;
-    margin    : 0 auto 50px;
+    max-width    : 500px;
+    margin-right : auto;
+    margin-left  : auto;
   }
-
-  .newsletter { margin-bottom: 0; }
 
 }
 
@@ -281,14 +320,16 @@ input[type="radio"]:not(old):checked + label > .radio-bg {
 @media (min-width: 768px) {
 
   .main-container {
-    max-width  : 750px;
-    margin     : 0 auto;
-    border-radius: .3em;
-    box-shadow: 0px 0px 26px 1px rgba(0,0,0,0.25);
+    max-width     : 750px;
+    margin        : 0 auto;
+
+    border-radius : .3em;
+    box-shadow    : 0 0 26px 1px rgba(0,0,0,0.25);
   }
 
   .main-header {
     margin-top              : 25px;
+
     border-top-left-radius  : .3em;
     border-top-right-radius : .3em;
   }
@@ -296,9 +337,66 @@ input[type="radio"]:not(old):checked + label > .radio-bg {
 
   .signup {
     margin-bottom              : 25px;
-    border-bottom-left-radius  : .3em;
+
     border-bottom-right-radius : .3em;
+    border-bottom-left-radius  : .3em;
   }
 
+}
 
+@media (min-width: 1500px) {
+
+  .contact-info .form-item:last-of-type { clear        : left;  }
+  .contact-info .form-item              { width        : 47.5%; }
+  .contact-info                         { float        : left;  }
+  .main-container                       { max-width    : 80%;   }
+  .newsletter                           { padding-left : 2.5%;  }
+  .signup                               { padding      : 50px;  }
+
+  .newsletter,
+  .contact-info {
+    max-width    : 50%;
+    margin-right : 0;
+    margin-left  : 0;
+  }
+
+  .contact-info {
+    margin-bottom : 0;
+    padding-right : 2.5%;
+  }
+
+  .contact-info .form-item:nth-of-type(odd) {
+    float        : left;
+    margin-right : 2.5%;
+  }
+
+  .contact-info .form-item:nth-of-type(even) {
+    float       : right;
+    margin-left : 2.5%;
+  }
+
+  .group-btn {
+    width        : 50%;
+    margin-right : auto;
+    margin-left  : auto;
+  }
+
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ */
+  input[type="text"  ],
+  input[type="email" ],
+  input[type="tel"   ],
+  textarea,
+  select { line-height: 16px; }
+
+}
+
+
+.clearfix:after {
+  display : table;
+  clear   : both;
+
+  content : "";
 }
