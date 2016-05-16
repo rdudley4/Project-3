@@ -66,9 +66,7 @@ legend {
 }
 
 .signup {
-  padding-top    : 50px;
-  padding-bottom : 50px;
-
+  padding: 50px 1.5em;
   background     : #ecf0f1;
 }
 
@@ -133,7 +131,7 @@ select {
   width         : 100%;
   padding       : 15px;
 
-  transition    : transform .4s ease;
+  transition    : border .4s ease;
 
   color         : #34495e;
   border        : 1px solid #ccc;
@@ -146,9 +144,10 @@ select {
 input[type="text"  ]:focus,
 input[type="email" ]:focus,
 input[type="tel"   ]:focus,
+textarea:focus,
 select:focus {
-  transition : transform .4s ease;
-  transform  : scale(1.05);
+  border-color : #27ae60;
+  transition   : border-color .4s ease;
 }
 
 select:-moz-focusring {
@@ -186,13 +185,13 @@ select:-moz-focusring {
 
 .news-caption:nth-of-type(2) { clear: left; }
 
-.group-btn { margin-top: 40px; }
+.group-btn { margin-top: 80px; }
 
 /* SHARED RADIO/CHECKBOX STYLING */
 
 /* Hide default radio and checkbox styling */
-input[type="checkbox"]:not(old),
-input[type="radio"   ]:not(old) {
+input[type="checkbox"],
+input[type="radio"   ] {
   margin    : 0;
   padding   : 0;
 
@@ -202,8 +201,8 @@ input[type="radio"   ]:not(old) {
 }
 
 /* default label text styles */
-input[type="checkbox"]:not(old) + label,
-input[type="radio"   ]:not(old) + label {
+input[type="checkbox"] + label,
+input[type="radio"   ] + label {
   display        : inline-block;
 
   margin-left    : -13px;
@@ -214,20 +213,20 @@ input[type="radio"   ]:not(old) + label {
   line-height    : 24px;
 }
 
-input[type="checkbox"]:not(old) + label:hover,
-input[type="radio"   ]:not(old) + label:hover {
+input[type="checkbox"] + label:hover,
+input[type="radio"   ] + label:hover {
   cursor: pointer;
 }
 
 /* default checked style for label text */
-input[type="checkbox"]:not(old):checked + label,
-input[type="radio"   ]:not(old):checked + label {
+input[type="checkbox"]:checked + label,
+input[type="radio"   ]:checked + label {
   color: #27ae60;
 }
 
 /* Unchecked default styles for both radio and check-box */
-input[type="checkbox"]:not(old) + label > .check-box,
-input[type="radio"   ]:not(old) + label > .radio-bg {
+input[type="checkbox"] + label > .check-box,
+input[type="radio"   ] + label > .radio-bg {
   position       : relative;
 
   display        : inline-block;
@@ -247,7 +246,7 @@ input[type="radio"   ]:not(old) + label > .radio-bg {
 
      Checked check-box Styling     */
 
-input[type="checkbox"]:not(old):checked + label > .check-box:before {
+input[type="checkbox"]:checked + label > .check-box:before {
   position    : absolute;
 
   display     : block;
@@ -264,7 +263,7 @@ input[type="checkbox"]:not(old):checked + label > .check-box:before {
 }
 
 
-input[type="checkbox"]:not(old):checked + label > .check-box {
+input[type="checkbox"]:checked + label > .check-box {
   transition   : border-color .2s ease;
   border-color : #2ecc71;
 }
@@ -273,7 +272,7 @@ input[type="checkbox"]:not(old):checked + label > .check-box {
 
      Checked Radio Button Styling     */
 
-input[type="radio"]:not(old):checked + label > .radio-bg > .radio-select {
+input[type="radio"]:checked + label > .radio-bg > .radio-select {
   position         : absolute;
   top              : 0;
   left             : 0;
@@ -290,19 +289,12 @@ input[type="radio"]:not(old):checked + label > .radio-bg > .radio-select {
   background-color : #2ecc71;
 }
 
-input[type="radio"]:not(old):checked + label > .radio-bg {
+input[type="radio"]:checked + label > .radio-bg {
   transition   : border-color .6s ease;
   border-color : #2ecc71;
 }
 
 
-
-@media (max-width: 550px) {
-  .signup {
-    padding-right : 1.25em;
-    padding-left  : 1.25em;
-  }
-}
 
 @media (min-width: 400px) {
 
@@ -363,6 +355,7 @@ input[type="radio"]:not(old):checked + label > .radio-bg {
   .contact-info {
     margin-bottom : 0;
     padding-right : 2.5%;
+    border-right  : 1px solid #ccc;
   }
 
   .contact-info .form-item:nth-of-type(odd) {
@@ -390,6 +383,9 @@ input[type="radio"]:not(old):checked + label > .radio-bg {
   input[type="tel"   ],
   textarea,
   select { line-height: 16px; }
+
+  /* Remove the triangle after our header on IE10 and up, until a better solution is found */
+  .main-header:after { border: none; }
 
 }
 
