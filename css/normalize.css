@@ -422,3 +422,19 @@ textarea {
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
+/**
+ * Custom Base Styling
+ */
+
+/* Remove base user agent styling for select */
+ select {
+   -webkit-appearance : none;
+      -moz-appearance : none;
+           appearance : none;
+ }
+
+/* IE */
+ select::-ms-expand {
+     display: none;
+ }
