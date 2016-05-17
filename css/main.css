@@ -40,12 +40,19 @@ body {
           transform : translateX(-50%);
 }
 
-.main-title,
-.newsletter-title      { margin-top: 0; }
+.newsletter-title-info { margin         : 0;   }
+.fa-check-square-o     { vertical-align : sub; }
 
-.main-title            { text-transform: uppercase; }
-.newsletter-title      { margin-bottom: .3em;       }
-.newsletter-title-info { margin: 0;                 }
+.main-title {
+  margin-top     : 5px;
+  text-transform : uppercase;
+}
+
+.newsletter-title      {
+  display       : inline-block;
+  margin-bottom : .3em;
+  margin-top    : 0;
+}
 
 textarea,
 .news-caption,
