@@ -69,6 +69,26 @@ legend {
   color      : #34495e;
 }
 
+#select-state {
+  background-image    : url('../img/ic_keyboard_arrow_down_default.png');
+  background-repeat   : no-repeat;
+  background-position : 95% 50%;
+  background-size     : 24px 24px;
+
+  -webkit-transition : all .2s ease-in;
+     -moz-transition : all .2s ease-in;
+          transition : all .2s ease-in;
+}
+
+#select-state:focus {
+  background-image : url('../img/ic_keyboard_arrow_down_active.png');
+  background-size  : 32px 32px;
+
+  -webkit-transition : all .2s ease-in;
+     -moz-transition : all .2s ease-in;
+          transition : all .2s ease-in;
+}
+
 .signup {
   padding    : 50px 1.5em;
   background : #ecf0f1;
