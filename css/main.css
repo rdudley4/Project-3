@@ -40,7 +40,11 @@ body {
           transform : translateX(-50%);
 }
 
-.newsletter-title-info { margin         : 0;   }
+.fa-codepen,
+.fa-check-square-o,
+.newsletter-title { color: #27ae60; }
+
+.newsletter-title-info { margin: 0;            }
 .fa-check-square-o     { vertical-align : sub; }
 
 .main-title {
