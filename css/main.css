@@ -429,16 +429,21 @@ input[type="radio"]:checked + label > .radio-bg {
   }
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* IE10+ */
+  input[type="text"  ],
+  input[type="email" ],
+  input[type="tel"   ],
+  textarea,
+  select {
+    line-height: 16px;
+  }
 
-/* IE10+ */
-_:-ms-lang(x), input[type="text"  ],
-_:-ms-lang(x), input[type="email" ],
-_:-ms-lang(x), input[type="tel"   ],
-_:-ms-lang(x), textarea,
-_:-ms-lang(x), select { line-height: 16px; }
-
-/* Remove the triangle after our header on IE10 and up, until a better solution is found */
-_:-ms-lang(x), .main-header:after { border: none; }
+  /* Remove the triangle after our header on IE10 and up, until a better solution is found */
+  .main-header:after {
+    border: none;
+  }
+}
 
 
 .clearfix:after {
