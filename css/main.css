@@ -4,7 +4,7 @@ body {
   color            : #7f8c8d;
   background-color : #ecf0f1;
 
-  font-family      : 'Montserrat', sans-serif;
+  font-family      : "Montserrat", sans-serif;
   line-height      : 1.5;
 }
 
@@ -24,25 +24,26 @@ body {
 }
 
 .main-header:after {
-  position          : absolute;
-  bottom            : -60px;
+  position         : absolute;
+  bottom           : -60px;
 
-  content           : ' ';
+  content          : " ";
+
+  border           : 30px solid transparent;
+  border-top-color : #34495e;
+
   -webkit-transform : translateX(-50%);
-  -ms-transform     : translateX(-50%);
-  transform         : translateX(-50%);
-
-  border            : 30px solid transparent;
-  border-top-color  : #34495e;
+     -moz-transform : translateX(-50%);
+      -ms-transform : translateX(-50%);
+          transform : translateX(-50%);
 }
 
 .main-title,
-.newsletter-title { margin-top: 0; }
+.newsletter-title      { margin-top: 0; }
 
-.main-title       { text-transform: uppercase; }
-.newsletter-title { margin-bottom: .3em; }
-
-.newsletter-title-info { margin: 0; }
+.main-title            { text-transform: uppercase; }
+.newsletter-title      { margin-bottom: .3em;       }
+.newsletter-title-info { margin: 0;                 }
 
 textarea,
 .news-caption,
@@ -55,19 +56,21 @@ label[for="more-interests"] { font-size: .9em; }
 fieldset {
   margin  : 0;
   padding : 0;
+
   border  : none;
 }
 
 legend {
   width      : 100%;
+
+  font-size  : 1.125em;
   text-align : center;
   color      : #34495e;
-  font-size  : 1.125em;
 }
 
 .signup {
-  padding: 50px 1.5em;
-  background     : #ecf0f1;
+  padding    : 50px 1.5em;
+  background : #ecf0f1;
 }
 
 .btn {
@@ -101,7 +104,11 @@ legend {
 
 .btn,
 .submit:hover,
-.cancel:hover { transition: background-color .4s ease, border-bottom .4s ease; }
+.cancel:hover {
+  -webkit-transition : background-color .4s ease, border-bottom .4s ease;
+     -moz-transition : background-color .4s ease, border-bottom .4s ease;
+          transition : background-color .4s ease, border-bottom .4s ease;
+}
 
 .contact-info { margin-bottom: 50px; }
 
@@ -131,14 +138,16 @@ select {
   width         : 100%;
   padding       : 15px;
 
-  transition    : border .4s ease;
-
   color         : #34495e;
   border        : 1px solid #ccc;
   border-radius : .3em;
 
-  font-family   : 'FontAwesome', 'Montserrat', sans-serif;
-  /*-webkit-appearance:none;*/
+  font-family   : "FontAwesome", "Montserrat", sans-serif;
+
+  -webkit-appearance : none;
+  -webkit-transition : border .4s ease;
+     -moz-transition : border .4s ease;
+          transition : border .4s ease;
 }
 
 input[type="text"  ]:focus,
@@ -146,20 +155,25 @@ input[type="email" ]:focus,
 input[type="tel"   ]:focus,
 textarea:focus,
 select:focus {
-  border-color : #27ae60;
-  transition   : border-color .4s ease;
+  border-color: #27ae60;
+
+  -webkit-transition : border-color .4s ease;
+     -moz-transition : border-color .4s ease;
+          transition : border-color .4s ease;
 }
 
 select:-moz-focusring {
-    color       : transparent;
-    text-shadow : 0 0 0 #000;
+  color       : transparent;
+  text-shadow : 0 0 0 #000;
 }
 
 /* Newsletter Section */
 
 .group-btn,
 .group-format,
-.group-interests { overflow: hidden; }
+.group-interests {
+  overflow: hidden;
+}
 
 .group-interests .form-item,
 .group-format .form-item {
@@ -207,10 +221,12 @@ input[type="radio"   ] + label {
 
   margin-left    : -13px;
 
-  transition     : color .4s ease;
   text-transform : uppercase;
-
   line-height    : 24px;
+
+  -webkit-transition : color .4s ease;
+     -moz-transition : color .4s ease;
+          transition : color .4s ease;
 }
 
 input[type="checkbox"] + label:hover,
@@ -235,11 +251,14 @@ input[type="radio"   ] + label > .radio-bg {
   height         : 1.5em;
   margin-right   : 5px;
 
-  transition     : border-color .4s ease;
   vertical-align : bottom;
 
   border         : solid 2px rgba(52, 73, 94, .8);
   border-radius  : 50%;
+
+  -webkit-transition : border-color .4s ease;
+     -moz-transition : border-color .4s ease;
+          transition : border-color .4s ease;
 }
 
 /*   CHECKBOX SPECIFIC STYLING
@@ -253,19 +272,26 @@ input[type="checkbox"]:checked + label > .check-box:before {
 
   width       : 1em;
 
-  content     : '✓';
-  transform   : translate(20%, 18%);
+  content     : "✓";
 
   color       : #2ecc71;
 
   font-weight : bold;
   line-height : 1em;
+
+  -webkit-transform : translate(20%, 18%);
+     -moz-transform : translate(20%, 18%);
+      -ms-transform : translate(20%, 18%);
+          transform : translate(20%, 18%);
 }
 
 
 input[type="checkbox"]:checked + label > .check-box {
-  transition   : border-color .2s ease;
   border-color : #2ecc71;
+
+  -webkit-transition : border-color .2s ease;
+     -moz-transition : border-color .2s ease;
+          transition : border-color .2s ease;
 }
 
 /*   RADIO SPECIFIC STYLING
@@ -282,22 +308,29 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
   width            : 1em;
   height           : 1em;
 
-  transition       : background-color .6s ease;
-  transform        : translate(12%, 12%);
-
   border-radius    : 50%;
   background-color : #2ecc71;
+
+  -webkit-transition : background-color .6s ease;
+     -moz-transition : background-color .6s ease;
+          transition : background-color .6s ease;
+   -webkit-transform : translate(12%, 12%);
+      -moz-transform : translate(12%, 12%);
+       -ms-transform : translate(12%, 12%);
+           transform : translate(12%, 12%);
 }
 
 input[type="radio"]:checked + label > .radio-bg {
-  transition   : border-color .6s ease;
   border-color : #2ecc71;
+
+  -webkit-transition : border-color .6s ease;
+     -moz-transition : border-color .6s ease;
+          transition : border-color .6s ease;
 }
 
 
 
 @media (min-width: 400px) {
-
   /* tablet styling */
   .newsletter,
   .contact-info {
@@ -305,18 +338,16 @@ input[type="radio"]:checked + label > .radio-bg {
     margin-right : auto;
     margin-left  : auto;
   }
-
 }
 
 
 @media (min-width: 768px) {
-
   .main-container {
     max-width     : 750px;
     margin        : 0 auto;
 
     border-radius : .3em;
-    box-shadow    : 0 0 26px 1px rgba(0,0,0,0.25);
+    box-shadow    : 0 0 26px 1px rgba(0,0,0,.25);
   }
 
   .main-header {
@@ -333,11 +364,9 @@ input[type="radio"]:checked + label > .radio-bg {
     border-bottom-right-radius : .3em;
     border-bottom-left-radius  : .3em;
   }
-
 }
 
 @media (min-width: 1500px) {
-
   .contact-info .form-item:last-of-type { clear        : left;  }
   .contact-info .form-item              { width        : 47.5%; }
   .contact-info                         { float        : left;  }
@@ -355,16 +384,19 @@ input[type="radio"]:checked + label > .radio-bg {
   .contact-info {
     margin-bottom : 0;
     padding-right : 2.5%;
+
     border-right  : 1px solid #ccc;
   }
 
   .contact-info .form-item:nth-of-type(odd) {
     float        : left;
+
     margin-right : 2.5%;
   }
 
   .contact-info .form-item:nth-of-type(even) {
     float       : right;
+
     margin-left : 2.5%;
   }
 
@@ -373,7 +405,6 @@ input[type="radio"]:checked + label > .radio-bg {
     margin-right : auto;
     margin-left  : auto;
   }
-
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -382,11 +413,14 @@ input[type="radio"]:checked + label > .radio-bg {
   input[type="email" ],
   input[type="tel"   ],
   textarea,
-  select { line-height: 16px; }
+  select {
+    line-height: 16px;
+  }
 
   /* Remove the triangle after our header on IE10 and up, until a better solution is found */
-  .main-header:after { border: none; }
-
+  .main-header:after {
+    border: none;
+  }
 }
 
 
