@@ -3,6 +3,7 @@
 body {
   color            : #7f8c8d;
   background-color : #ecf0f1;
+  background-image : url("../img/az-subtle.png");
 
   font-family      : "Montserrat", sans-serif;
   line-height      : 1.5;
@@ -125,7 +126,7 @@ label[for="more-interests"] {
 
 textarea {
   width      : 100%;
-  min-height : 100px;
+  min-height : 143.8px;
 
   resize     : vertical;
 }
@@ -144,7 +145,6 @@ select {
 
   font-family   : "FontAwesome", "Montserrat", sans-serif;
 
-  -webkit-appearance : none;
   -webkit-transition : border .4s ease;
      -moz-transition : border .4s ease;
           transition : border .4s ease;
@@ -156,6 +156,7 @@ input[type="tel"   ]:focus,
 textarea:focus,
 select:focus {
   border-color: #27ae60;
+  outline     : none;
 
   -webkit-transition : border-color .4s ease;
      -moz-transition : border-color .4s ease;
@@ -171,9 +172,7 @@ select:-moz-focusring {
 
 .group-btn,
 .group-format,
-.group-interests {
-  overflow: hidden;
-}
+.group-interests { overflow: hidden; }
 
 .group-interests .form-item,
 .group-format .form-item {
@@ -199,7 +198,7 @@ select:-moz-focusring {
 
 .news-caption:nth-of-type(2) { clear: left; }
 
-.group-btn { margin-top: 80px; }
+.group-btn { margin-top: 60px; }
 
 /* SHARED RADIO/CHECKBOX STYLING */
 
@@ -402,6 +401,7 @@ input[type="radio"]:checked + label > .radio-bg {
 
   .group-btn {
     width        : 50%;
+    margin-top   : 80px;
     margin-right : auto;
     margin-left  : auto;
   }
