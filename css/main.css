@@ -429,7 +429,7 @@ input[type="radio"]:checked + label > .radio-bg {
   }
 }
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* IE10+ */
   input[type="text"  ],
   input[type="email" ],
