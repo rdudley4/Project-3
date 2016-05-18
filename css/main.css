@@ -86,17 +86,16 @@ legend {
   background-repeat   : no-repeat;
   background-position : 95% 50%;
   background-size     : 24px 24px;
-
-  -webkit-transition : all .2s ease-in;
-     -moz-transition : all .2s ease-in;
-          transition : all .2s ease-in;
 }
 
 #select-state:focus {
   background-image : url('../img/ic_keyboard_arrow_down_active.png');
   background-size  : 32px 32px;
   color            : #2cae60;
+}
 
+#select-state,
+#select-state:focus {
   -webkit-transition : all .2s ease-in;
      -moz-transition : all .2s ease-in;
           transition : all .2s ease-in;
@@ -146,6 +145,8 @@ legend {
 
 .contact-info { margin-bottom: 50px; }
 
+.contact-info .form-item { position: relative; }
+
 .contact-info label,
 label[for="more-interests"] {
   display       : block;
@@ -176,7 +177,7 @@ select {
   border        : 1px solid #ccc;
   border-radius : .3em;
 
-  line-height   : 1em;
+  line-height   : 1;
   font-family   : "FontAwesome", "Montserrat", sans-serif;
 
   -webkit-transition : border-color .4s ease, color .4s ease;
@@ -202,6 +203,34 @@ select:-moz-focusring {
   color       : transparent;
   text-shadow : 0 0 0 #000;
 }
+
+.required {
+  position  : absolute;
+  top       : 5%;
+  right     : 0;
+
+  font-size : 12px;
+}
+
+.form-item input:invalid {
+  border     : 1px solid tomato;
+  box-shadow : none;
+  color      : tomato;
+}
+
+.form-item input:invalid + .required { color : tomato;  }
+.form-item input:valid + .required   { color : #27ae60; }
+
+.required,
+.form-item input:valid + .required,
+.form-item input:invalid + .required {
+  -webkit-transition : color .4s ease;
+     -moz-transition : color .4s ease;
+      -ms-transition : color .1s ease;
+          transition : color .4s ease;
+}
+
+
 
 /* Newsletter Section */
 
@@ -406,6 +435,7 @@ input[type="radio"]:checked + label > .radio-bg {
   .contact-info                         { float        : left;  }
   .main-container                       { max-width    : 80%;   }
   .newsletter                           { padding-left : 2.5%;  }
+  .required                             { top: 21%;             }
   .signup                               { padding      : 50px;  }
 
   .newsletter,
