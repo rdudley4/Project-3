@@ -80,6 +80,7 @@ legend {
     color     : #34495e;
 }
 
+/* State Selection */
 #select-state {
     background-image   : url('../img/ic_keyboard_arrow_down_default.png');
     background-repeat  : no-repeat;
@@ -100,6 +101,7 @@ legend {
     transition        : all 0.2s ease-in;
 }
 
+/* Button Group Styling */
 .signup {
     padding   : 50px 1.5em;
     background: #ecf0f1;
@@ -160,6 +162,7 @@ label[for="more-interests"] {
     display: block;
 }
 
+/* Base Input Styling */
 textarea {
     width     : 100%;
     min-height: 118.8px;
@@ -201,6 +204,7 @@ select:-moz-focusring {
     text-shadow: 0 0 0 #000;
 }
 
+/* Validation Styling */
 .required {
     position   : absolute;
     top        : 5%;
@@ -373,6 +377,7 @@ input[type="radio"]:checked + label > .radio-bg {
         margin-left : auto;
     }
 }
+/* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
         max-width    : 750px;
@@ -393,6 +398,7 @@ input[type="radio"]:checked + label > .radio-bg {
         border-bottom-left-radius : 0.3em;
     }
 }
+/* Large Desktop Displays */
 @media (min-width: 1500px) {
     .contact-info .form-item:last-of-type {
         clear: left;
