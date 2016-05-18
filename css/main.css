@@ -397,7 +397,8 @@ input[type="radio"]:checked + label > .radio-bg {
 @media (min-width: 400px) {
   /* tablet styling */
   .newsletter,
-  .contact-info {
+  .contact-info,
+  .group-social {
     max-width    : 500px;
     margin-right : auto;
     margin-left  : auto;
