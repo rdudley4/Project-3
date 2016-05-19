@@ -115,6 +115,7 @@ fieldset {
 }
 /* Button Group Styling */
 .signup {
+    position  : relative;
     padding   : 50px 1.5em;
     background: #ecf0f1;
 }
@@ -419,6 +420,12 @@ input[type="radio"]:checked + label > .radio-bg {
 .fa-google-plus:hover {
     color: rgb(221,79,67);
 }
+
+.form-footer {
+    text-align: center;
+    font-size : 0.75em;
+    margin-top: 12px;
+}
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
@@ -491,6 +498,14 @@ input[type="radio"]:checked + label > .radio-bg {
     .contact-info .form-item:nth-of-type(even) {
         float      : right;
         margin-left: 2.5%;
+    }
+
+    .form-footer {
+        /* Use absolute positioning so we can place inside the padded area. */
+        position  : absolute;
+        bottom    : 1%;
+        left      : 1%;
+        text-align: left;
     }
 }
 
