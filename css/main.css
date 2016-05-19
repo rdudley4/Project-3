@@ -15,24 +15,11 @@ body {
 }
 /* Main-Header Styles */
 .main-header {
-    position        : relative;
     padding         : 15px;
     text-align      : center;
     color           : #fff;
     background-color: #34495e;
-}
-
-.main-header:after {
-    position         : absolute;
-    bottom           : -60px;
-    left             : 50%;
-    content          : " ";
-    border           : 30px solid transparent;
-    border-top-color : #34495e;
-    -webkit-transform: translateX(-50%);
-    -moz-transform   : translateX(-50%);
-    -ms-transform    : translateX(-50%);
-    transform        : translateX(-50%);
+    background-image: url('../img/hexabump.png');
 }
 
 .fa-check-square-o,
@@ -251,15 +238,8 @@ select:-moz-focusring {
 
 .group-format .form-item,
 .group-interests .form-item {
-    float     : left;
-    clear     : left;
     box-sizing: content-box;
     padding   : 5px;
-}
-
-.newsletter .form-item:nth-of-type(even) {
-    float: right;
-    clear: right;
 }
 
 .group-interests .form-item:last-of-type,
@@ -373,10 +353,13 @@ input[type="radio"]:checked + label > .radio-bg {
 }
 
 .marketing-info .form-item {
-    display   : inline-block;
-    float     : left;
-    width     : 33.3333%;
     text-align: center;
+}
+
+.marketing-info .form-item:nth-of-type(2) {
+    margin-top   : 20px;
+    margin-bottom: 20px;
+    transition   : all 0.4s ease;
 }
 
 .marketing-info input[type="checkbox"] + label > .check-box {
@@ -425,6 +408,29 @@ input[type="radio"]:checked + label > .radio-bg {
     text-align: center;
     font-size : 0.75em;
     margin-top: 12px;
+}
+@media(min-width: 320px) {
+    .group-format .form-item,
+    .group-interests .form-item {
+        float: left;
+        clear: left;
+    }
+
+    .newsletter .form-item:nth-of-type(even) {
+        float: right;
+        clear: right;
+    }
+}
+@media(min-width: 400px) {
+    .marketing-info .form-item {
+        display: inline-block;
+        float  : left;
+        width  : 33.3333%;
+    }
+
+    .marketing-info .form-item:nth-of-type(2) {
+        margin: 0;
+    }
 }
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
