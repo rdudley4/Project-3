@@ -356,10 +356,8 @@ input[type="radio"]:checked + label > .radio-bg {
     text-align: center;
 }
 
-.marketing-info .form-item:nth-of-type(2) {
-    margin-top   : 20px;
-    margin-bottom: 20px;
-    transition   : all 0.4s ease;
+.marketing-info .form-item:not(:last-of-type) {
+  margin-bottom: 30px;
 }
 
 .marketing-info input[type="checkbox"] + label > .check-box {
@@ -428,8 +426,8 @@ input[type="radio"]:checked + label > .radio-bg {
         width  : 33.3333%;
     }
 
-    .marketing-info .form-item:nth-of-type(2) {
-        margin: 0;
+    .marketing-info .form-item:nth-of-type(n+4) {
+        margin-bottom: 0;
     }
 }
 /* Some Tablets & Small Desktop/Laptop Styles */
