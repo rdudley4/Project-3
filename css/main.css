@@ -402,23 +402,12 @@ input[type="radio"]:checked + label > .radio-bg {
     color: rgb(94,169,221);
 }
 
-<<<<<<< HEAD
-@media (min-width: 400px) {
-    /* tablet styling */
-    .contact-info,
-    .newsletter {
-        max-width   : 500px;
-        margin-right: auto;
-        margin-left : auto;
-    }
-=======
 .fa-facebook:hover {
     color: rgb(63,88,155);
 }
 
 .fa-google-plus:hover {
     color: rgb(221,79,67);
->>>>>>> master
 }
 
 /* Some Tablets & Small Desktop/Laptop Styles */
