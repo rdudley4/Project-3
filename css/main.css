@@ -79,6 +79,15 @@ legend {
     text-align: center;
     color     : #34495e;
 }
+
+.contact-info,
+.group-social,
+.newsletter {
+    max-width   : 500px;
+    margin-right: auto;
+    margin-left : auto;
+}
+
 /* State Selection */
 #select-state {
     background-image   : url('../img/ic_keyboard_arrow_down_default.png');
@@ -162,7 +171,7 @@ label[for="more-interests"] {
 /* Base Input Styling */
 textarea {
     width     : 100%;
-    min-height: 118.8px;
+    min-height: 143.8px;
     resize    : vertical;
 }
 
@@ -172,7 +181,7 @@ input[type="text" ],
 select,
 textarea {
     width             : 100%;
-    height            : 56px; 
+    height            : 56px;
     padding           : 15px;
     color             : #34495e;
     border            : 1px solid #ccc;
@@ -266,7 +275,10 @@ select:-moz-focusring {
 }
 
 .group-btn {
-    margin-top: 60px;
+    max-width   : 500px;
+    margin-top  : 60px;
+    margin-left : auto;
+    margin-right: auto;
 }
 /* SHARED RADIO/CHECKBOX STYLING */
 /* Hide default radio and checkbox styling */
@@ -368,7 +380,7 @@ input[type="radio"]:checked + label > .radio-bg {
 .group-social {
     margin-top: 40px;
     text-align: center;
-    font-size: .75em;
+    font-size : 0.75em;
 }
 
 .group-social i:not(:last-of-type) {
@@ -376,30 +388,28 @@ input[type="radio"]:checked + label > .radio-bg {
 }
 
 .group-social .fa {
-  transition: color .4s ease;
+    transition: color 0.4s ease;
 }
 
-.fa-twitter:hover,
 .fa-facebook:hover,
+.fa-google-plus:hover,
+.fa-twitter:hover {
+    transition: color 0.4s ease;
+    cursor    : pointer;
+}
+
+.fa-twitter:hover {
+    color: rgb(94,169,221);
+}
+
+.fa-facebook:hover {
+    color: rgb(63,88,155);
+}
+
 .fa-google-plus:hover {
-  transition: color .4s ease;
-  cursor: pointer;
+    color: rgb(221,79,67);
 }
 
-.fa-twitter:hover { color: rgb(94,169,221); }
-.fa-facebook:hover { color: rgb(63,88,155);}
-.fa-google-plus:hover { color: rgb(221,79,67);}
-
-@media (min-width: 400px) {
-    /* tablet styling */
-    .contact-info,
-    .group-social,
-    .newsletter {
-        max-width   : 500px;
-        margin-right: auto;
-        margin-left : auto;
-    }
-}
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
@@ -475,10 +485,7 @@ input[type="radio"]:checked + label > .radio-bg {
     }
 
     .group-btn {
-        width       : 50%;
-        margin-top  : 80px;
-        margin-right: auto;
-        margin-left : auto;
+        margin-top: 80px;
     }
 }
 
