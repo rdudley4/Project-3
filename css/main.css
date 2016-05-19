@@ -401,22 +401,22 @@ input[type="radio"]:checked + label > .radio-bg {
     transition: color 0.4s ease;
 }
 
-.group-social .fa-facebook:hover,
-.group-social .fa-google-plus:hover,
-.group-social .fa-twitter:hover {
+.fa-facebook:hover,
+.fa-google-plus:hover,
+.fa-twitter:hover {
     transition: color 0.4s ease;
     cursor    : pointer;
 }
 
-.group-social .fa-twitter:hover {
+.fa-twitter:hover {
     color: rgb(94,169,221);
 }
 
-.group-social .fa-facebook:hover {
+.fa-facebook:hover {
     color: rgb(63,88,155);
 }
 
-.group-social .fa-google-plus:hover {
+.fa-google-plus:hover {
     color: rgb(221,79,67);
 }
 /* Some Tablets & Small Desktop/Laptop Styles */
