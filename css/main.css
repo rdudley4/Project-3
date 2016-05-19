@@ -20,9 +20,10 @@ body {
     text-align      : center;
     color           : #fff;
     background-color: #34495e;
+    background-image: url("http://www.transparenttextures.com/patterns/hexabump.png");
 }
 
-.main-header:after {
+/*.main-header:after {
     position         : absolute;
     bottom           : -60px;
     left             : 50%;
@@ -33,7 +34,7 @@ body {
     -moz-transform   : translateX(-50%);
     -ms-transform    : translateX(-50%);
     transform        : translateX(-50%);
-}
+}*/
 
 .fa-check-square-o,
 .fa-codepen,
@@ -251,16 +252,14 @@ select:-moz-focusring {
 
 .group-format .form-item,
 .group-interests .form-item {
-    float     : left;
-    clear     : left;
     box-sizing: content-box;
     padding   : 5px;
 }
 
-.newsletter .form-item:nth-of-type(even) {
+/*.newsletter .form-item:nth-of-type(even) {
     float: right;
     clear: right;
-}
+}*/
 
 .group-interests .form-item:last-of-type,
 .group-interests .form-item:nth-of-type(4) {
@@ -373,9 +372,6 @@ input[type="radio"]:checked + label > .radio-bg {
 }
 
 .marketing-info .form-item {
-    display   : inline-block;
-    float     : left;
-    width     : 33.3333%;
     text-align: center;
 }
 
@@ -426,6 +422,39 @@ input[type="radio"]:checked + label > .radio-bg {
     font-size : 0.75em;
     margin-top: 12px;
 }
+
+@media (min-width: 300px) {
+  .group-format .form-item,
+  .group-interests .form-item {
+      float     : left;
+      clear     : left;
+  }
+
+  .newsletter .form-item:nth-of-type(even) {
+      float: right;
+      clear: right;
+  }
+}
+}
+@media (max-width: 449px) {
+    .marketing-info .form-item:nth-of-type(2) {
+        margin-top   : 20px;
+        margin-bottom: 20px;
+        transition: all .4s ease;
+    }
+}
+@media (min-width: 450px) {
+    .marketing-info .form-item:nth-of-type(2) {
+        margin: 0;
+    }
+
+    .marketing-info .form-item {
+        display: inline-block;
+        float  : left;
+        width  : 33.3333%;
+    }
+}
+
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
@@ -445,6 +474,12 @@ input[type="radio"]:checked + label > .radio-bg {
         margin-bottom             : 25px;
         border-bottom-right-radius: 0.3em;
         border-bottom-left-radius : 0.3em;
+    }
+
+    .marketing-info .form-item {
+        display: inline-block;
+        float  : left;
+        width  : 33.3333%;
     }
 }
 /* Large Desktop Displays */
