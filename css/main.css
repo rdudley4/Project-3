@@ -80,14 +80,19 @@ legend {
     color     : #34495e;
 }
 
+fieldset {
+    margin-bottom: 60px;
+}
+
 .contact-info,
+.group-btn,
 .group-social,
+.marketing-info,
 .newsletter {
     max-width   : 500px;
     margin-right: auto;
     margin-left : auto;
 }
-
 /* State Selection */
 #select-state {
     background-image   : url('../img/ic_keyboard_arrow_down_default.png');
@@ -147,10 +152,6 @@ legend {
     -webkit-transition: background-color 0.4s ease, border-bottom 0.4s ease;
     -moz-transition   : background-color 0.4s ease, border-bottom 0.4s ease;
     transition        : background-color 0.4s ease, border-bottom 0.4s ease;
-}
-
-.contact-info {
-    margin-bottom: 50px;
 }
 
 .contact-info .form-item {
@@ -273,27 +274,16 @@ select:-moz-focusring {
 .news-caption:nth-of-type(2) {
     clear: left;
 }
-
-.group-btn {
-    max-width   : 500px;
-    margin-top  : 60px;
-    margin-left : auto;
-    margin-right: auto;
-}
 /* SHARED RADIO/CHECKBOX STYLING */
 /* Hide default radio and checkbox styling */
 input[type="checkbox"],
 input[type="radio" ] {
-    margin   : 0;
-    padding  : 0;
-    opacity  : 0;
-    font-size: 2em;
+    display: none;
 }
 /* default label text styles */
 input[type="checkbox"] + label,
 input[type="radio" ] + label {
     display           : inline-block;
-    margin-left       : -13px;
     text-transform    : uppercase;
     line-height       : 24px;
     -webkit-transition: color 0.4s ease;
@@ -376,6 +366,26 @@ input[type="radio"]:checked + label > .radio-bg {
     transition        : border-color 0.6s ease;
 }
 
+/* Marketing-info Section (How did you hear about us) */
+.marketing-info legend {
+    margin-bottom: 30px;
+}
+
+.marketing-info .form-item {
+    display   : inline-block;
+    float     : left;
+    width     : 33.3333%;
+    text-align: center;
+}
+
+.marketing-info input[type="checkbox"] + label > .check-box {
+    display: none;
+}
+
+.marketing-info .fa {
+    display: block;
+}
+
 /*Social Icons*/
 .group-social {
     margin-top: 40px;
@@ -391,25 +401,24 @@ input[type="radio"]:checked + label > .radio-bg {
     transition: color 0.4s ease;
 }
 
-.fa-facebook:hover,
-.fa-google-plus:hover,
-.fa-twitter:hover {
+.group-social .fa-facebook:hover,
+.group-social .fa-google-plus:hover,
+.group-social .fa-twitter:hover {
     transition: color 0.4s ease;
     cursor    : pointer;
 }
 
-.fa-twitter:hover {
+.group-social .fa-twitter:hover {
     color: rgb(94,169,221);
 }
 
-.fa-facebook:hover {
+.group-social .fa-facebook:hover {
     color: rgb(63,88,155);
 }
 
-.fa-google-plus:hover {
+.group-social .fa-google-plus:hover {
     color: rgb(221,79,67);
 }
-
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
@@ -482,10 +491,6 @@ input[type="radio"]:checked + label > .radio-bg {
     .contact-info .form-item:nth-of-type(even) {
         float      : right;
         margin-left: 2.5%;
-    }
-
-    .group-btn {
-        margin-top: 80px;
     }
 }
 
