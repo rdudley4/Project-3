@@ -15,11 +15,11 @@ body {
 }
 /* Main-Header Styles */
 .main-header {
-    position        : relative;
     padding         : 15px;
     text-align      : center;
     color           : #fff;
     background-color: #34495e;
+<<<<<<< HEAD
     background-image: url("http://www.transparenttextures.com/patterns/hexabump.png");
 }
 
@@ -35,6 +35,10 @@ body {
     -ms-transform    : translateX(-50%);
     transform        : translateX(-50%);
 }*/
+=======
+    background-image: url('../img/hexabump.png');
+}
+>>>>>>> master
 
 .fa-check-square-o,
 .fa-codepen,
@@ -256,11 +260,14 @@ select:-moz-focusring {
     padding   : 5px;
 }
 
+<<<<<<< HEAD
 /*.newsletter .form-item:nth-of-type(even) {
     float: right;
     clear: right;
 }*/
 
+=======
+>>>>>>> master
 .group-interests .form-item:last-of-type,
 .group-interests .form-item:nth-of-type(4) {
     width: 96.95px;
@@ -375,6 +382,12 @@ input[type="radio"]:checked + label > .radio-bg {
     text-align: center;
 }
 
+.marketing-info .form-item:nth-of-type(2) {
+    margin-top   : 20px;
+    margin-bottom: 20px;
+    transition   : all 0.4s ease;
+}
+
 .marketing-info input[type="checkbox"] + label > .check-box {
     display: none;
 }
@@ -422,6 +435,7 @@ input[type="radio"]:checked + label > .radio-bg {
     font-size : 0.75em;
     margin-top: 12px;
 }
+<<<<<<< HEAD
 
 @media (min-width: 300px) {
   .group-format .form-item,
@@ -448,13 +462,36 @@ input[type="radio"]:checked + label > .radio-bg {
         margin: 0;
     }
 
+=======
+@media(min-width: 320px) {
+    .group-format .form-item,
+    .group-interests .form-item {
+        float: left;
+        clear: left;
+    }
+
+    .newsletter .form-item:nth-of-type(even) {
+        float: right;
+        clear: right;
+    }
+}
+@media(min-width: 400px) {
+>>>>>>> master
     .marketing-info .form-item {
         display: inline-block;
         float  : left;
         width  : 33.3333%;
     }
+<<<<<<< HEAD
 }
 
+=======
+
+    .marketing-info .form-item:nth-of-type(2) {
+        margin: 0;
+    }
+}
+>>>>>>> master
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
     .main-container {
