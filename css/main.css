@@ -42,8 +42,7 @@ a:hover {
   background-image: url("../img/transparent-square-tiles.png");
 }
 
-.fa-check-square-o,
-.fa-codepen,
+.main-header .fa,
 .newsletter-title {
   color: #2ecc71;
 }
@@ -262,7 +261,6 @@ select:-moz-focusring {
 }
 
 /* Newsletter Section */
-/* TODO: Group with other overflow rule*/
 
 .group-btn,
 .group-format,
@@ -286,10 +284,6 @@ select:-moz-focusring {
   text-align: justify;
 }
 
-/* TODO: Remove this. Doesn't seem to be needed anymore.    */
-.news-caption:nth-of-type(2) {
-  clear: left;
-}
 
 /* SHARED RADIO/CHECKBOX STYLING */
 /* Hide default radio and checkbox styling */
