@@ -11,26 +11,13 @@ body {
 }
 
 a,
-body {
-  color: #7f8c8d;
-}
+body { color: #7f8c8d; }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: #27ae60;
-}
+a       { text-decoration: none; }
+a:hover { color: #27ae60; }
 
 a,
-a:hover {
-  transition: color 0.2s ease;
-}
-
-.overflow-container {
-  overflow: hidden;
-}
+a:hover { transition: color 0.2s ease; }
 
 /* Main-Header Styles */
 
@@ -43,17 +30,10 @@ a:hover {
 }
 
 .main-header .fa,
-.newsletter-title {
-  color: #2ecc71;
-}
+.newsletter-title { color: #2ecc71; }
 
-.newsletter-title-info {
-  margin: 0;
-}
-
-.fa-check-square-o {
-  vertical-align: sub;
-}
+.newsletter-title-info { margin: 0; }
+.fa-check-square-o     { vertical-align: sub; }
 
 .main-title {
   margin-top    : 5px;
@@ -69,9 +49,7 @@ a:hover {
 .news-caption,
 .newsletter-title-info,
 label[for="more-interests"],
-textarea {
-  font-size: 0.9em;
-}
+textarea { font-size: 0.9em; }
 
 /* Form Styles */
 
@@ -88,9 +66,7 @@ legend {
   color     : #34495e;
 }
 
-fieldset {
-  margin-bottom: 60px;
-}
+fieldset { margin-bottom: 60px; }
 
 .signup {
   position  : relative;
@@ -167,9 +143,7 @@ fieldset {
   transition        : background-color 0.4s ease, border-bottom 0.4s ease;
 }
 /* Set form-item positioning to relative, so we can position our validation spans (.required) */
-.contact-info .form-item {
-  position: relative;
-}
+.contact-info .form-item { position: relative; }
 
 .contact-info label,
 label[for="more-interests"] {
@@ -179,9 +153,7 @@ label[for="more-interests"] {
 }
 
 .fa-home,
-.fa-newspaper-o {
-  display: block;
-}
+.fa-newspaper-o { display: block; }
 
 /* Base Input Styling */
 
@@ -243,13 +215,8 @@ select:-moz-focusring {
   color     : tomato;
 }
 
-.form-item input:invalid + .required {
-  color: tomato;
-}
-
-.form-item input:valid + .required {
-  color: #27ae60;
-}
+.form-item input:invalid + .required { color: tomato; }
+.form-item input:valid + .required   { color: #27ae60; }
 
 .form-item input:invalid + .required,
 .form-item input:valid + .required,
@@ -264,9 +231,7 @@ select:-moz-focusring {
 
 .group-btn,
 .group-format,
-.group-interests {
-  overflow: hidden;
-}
+.group-interests { overflow: hidden; }
 
 .group-format .form-item,
 .group-interests .form-item {
@@ -275,9 +240,7 @@ select:-moz-focusring {
 }
 
 .group-interests .form-item:last-of-type,
-.group-interests .form-item:nth-of-type(4) {
-  width: 96.95px;
-}
+.group-interests .form-item:nth-of-type(4) { width: 96.95px; }
 
 .news-caption {
   margin-top: 20px;
@@ -289,9 +252,7 @@ select:-moz-focusring {
 /* Hide default radio and checkbox styling */
 
 input[type="checkbox"],
-input[type="radio" ] {
-  display: none;
-}
+input[type="radio" ] { display: none; }
 
 /* default label text styles */
 input[type="checkbox"] + label,
@@ -305,21 +266,15 @@ input[type="radio" ] + label {
 }
 
 input[type="checkbox"] + label:hover,
-input[type="radio" ] + label:hover {
-  cursor: pointer;
-}
+input[type="radio" ] + label:hover { cursor: pointer; }
 
 /* default checked style for label / button / checkbox */
 input[type="checkbox"]:checked + label,
 input[type="checkbox"]:checked + label > .check-box:before,
-input[type="radio" ]:checked + label {
-  color: #27ae60;
-}
+input[type="radio" ]:checked + label { color: #27ae60; }
 
 input[type="checkbox"]:checked + label > .check-box,
-input[type="radio"]:checked + label > .radio-bg {
-  border-color: #27ae60;
-}
+input[type="radio"]:checked + label > .radio-bg { border-color: #27ae60; }
 
 input[type="checkbox"] + label > .check-box,
 input[type="checkbox"]:checked + label > .check-box,
@@ -382,25 +337,15 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 
 /* Marketing-info Section (How did you hear about us) */
 
-.marketing-info legend {
-  margin-bottom: 30px;
-}
+.marketing-info .fa { display: block; }
 
-.marketing-info .form-item {
-  text-align: center;
-}
+.marketing-info legend {  margin-bottom: 30px; }
 
-.marketing-info .form-item:not(:last-of-type) {
-  margin-bottom: 30px;
-}
+.marketing-info .form-item { text-align: center; }
 
-.marketing-info input[type="checkbox"] + label > .check-box {
-  display: none;
-}
+.marketing-info .form-item:not(:last-of-type) { margin-bottom: 30px; }
 
-.marketing-info .fa {
-  display: block;
-}
+.marketing-info input[type="checkbox"] + label > .check-box { display: none; }
 
 /*Social Icons*/
 
@@ -410,30 +355,15 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
   font-size : 0.75em;
 }
 
-.group-social i:not(:last-of-type) {
-  margin-right: 10px;
-}
+.group-social i:not(:last-of-type) { margin-right: 10px; }
 
 .group-social .fa,
-.group-social .fa:hover {
-  transition: color 0.4s ease;
-}
+.group-social .fa:hover { transition: color 0.4s ease; }
 
-.group-social .fa:hover {
-  cursor: pointer;
-}
-
-.fa-twitter:hover {
-  color: rgb(94,169,221);
-}
-
-.fa-facebook:hover {
-  color: rgb(63,88,155);
-}
-
-.fa-google-plus:hover {
-  color: rgb(221,79,67);
-}
+.group-social .fa:hover { cursor: pointer; }
+.fa-twitter:hover       { color : rgb(94,169,221); }
+.fa-facebook:hover      { color : rgb(63,88,155); }
+.fa-google-plus:hover   { color : rgb(221,79,67); }
 
 .form-footer {
   text-align: center;
@@ -459,9 +389,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     width  : 33.3333%;
   }
 
-  .marketing-info .form-item:nth-of-type(n+4) {
-    margin-bottom: 0;
-  }
+  .marketing-info .form-item:nth-of-type(n+4) { margin-bottom: 0; }
 }
 
 /* Some Tablets & Small Desktop/Laptop Styles */
@@ -488,33 +416,14 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 
 /* Large Desktop Displays */
 @media (min-width: 1500px) {
-  .contact-info .form-item:last-of-type {
-    clear: left;
-  }
+  .contact-info .form-item:last-of-type { clear: left; }
+  .contact-info .form-item              { width: 47.5%; }
+  .contact-info                         { float: left; }
 
-  .contact-info .form-item {
-    width: 47.5%;
-  }
-
-  .contact-info {
-    float: left;
-  }
-
-  .main-container {
-    max-width: 80%;
-  }
-
-  .newsletter {
-    padding-left: 2.5%;
-  }
-
-  .required {
-    top: 21%;
-  }
-
-  .signup {
-    padding: 50px;
-  }
+  .main-container { max-width: 80%; }
+  .newsletter     { padding-left: 2.5%; }
+  .required       { top: 21%; }
+  .signup         { padding: 50px; }
 
   .contact-info,
   .newsletter {
