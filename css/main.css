@@ -337,15 +337,22 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 
 /* Marketing-info Section (How did you hear about us) */
 
-.marketing-info .fa { display: block; }
+.marketing-info .fa    { display: block; }
+.marketing-info legend { margin-bottom: 30px; }
 
-.marketing-info legend {  margin-bottom: 30px; }
+.marketing-info .form-item {
+  float     : left;
+  width     : 50%;
+  text-align: center;
+}
 
-.marketing-info .form-item { text-align: center; }
+.marketing-info .form-item:not(:nth-of-type(n+5)) {
+  margin-bottom: 30px;
+}
 
-.marketing-info .form-item:not(:last-of-type) { margin-bottom: 30px; }
-
-.marketing-info input[type="checkbox"] + label > .check-box { display: none; }
+.marketing-info input[type="checkbox"] + label > .check-box {
+  display: none;
+}
 
 /*Social Icons*/
 
