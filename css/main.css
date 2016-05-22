@@ -31,7 +31,9 @@ a:hover {
 .overflow-container {
   overflow: hidden;
 }
+
 /* Main-Header Styles */
+
 .main-header {
   padding         : 15px;
   text-align      : center;
@@ -40,8 +42,7 @@ a:hover {
   background-image: url("../img/transparent-square-tiles.png");
 }
 
-.fa-check-square-o,
-.fa-codepen,
+.main-header .fa,
 .newsletter-title {
   color: #2ecc71;
 }
@@ -71,7 +72,9 @@ label[for="more-interests"],
 textarea {
   font-size: 0.9em;
 }
+
 /* Form Styles */
+
 fieldset {
   margin : 0;
   padding: 0;
@@ -89,6 +92,12 @@ fieldset {
   margin-bottom: 60px;
 }
 
+.signup {
+  position  : relative;
+  padding   : 50px 1.5em;
+  background: #ecf0f1;
+}
+
 .contact-info,
 .group-btn,
 .group-social,
@@ -98,7 +107,9 @@ fieldset {
   margin-right: auto;
   margin-left : auto;
 }
+
 /* State Selection */
+
 #select-state {
   background-image   : url('../img/ic_keyboard_arrow_down_default.png');
   background-repeat  : no-repeat;
@@ -118,12 +129,8 @@ fieldset {
   -moz-transition   : all 0.2s ease-in;
   transition        : all 0.2s ease-in;
 }
+
 /* Button Group Styling */
-.signup {
-  position  : relative;
-  padding   : 50px 1.5em;
-  background: #ecf0f1;
-}
 
 .btn {
   float           : left;
@@ -159,7 +166,7 @@ fieldset {
   -moz-transition   : background-color 0.4s ease, border-bottom 0.4s ease;
   transition        : background-color 0.4s ease, border-bottom 0.4s ease;
 }
-
+/* Set form-item positioning to relative, so we can position our validation spans (.required) */
 .contact-info .form-item {
   position: relative;
 }
@@ -175,7 +182,9 @@ label[for="more-interests"] {
 .fa-newspaper-o {
   display: block;
 }
+
 /* Base Input Styling */
+
 textarea {
   width     : 100%;
   min-height: 143.8px;
@@ -185,21 +194,21 @@ textarea {
 input,
 select,
 textarea {
-  width             : 100%;
-  height            : 56px;
-  padding           : 15px;
-  color             : #34495e;
-  border            : 1px solid #ccc;
-  border-radius     : 0.3em;
-  font-family       : "FontAwesome", "Montserrat", sans-serif;
+  width        : 100%;
+  height       : 56px;
+  padding      : 15px;
+  color        : #34495e;
+  border       : 1px solid #ccc;
+  border-radius: 0.3em;
+  font-family  : "FontAwesome", "Montserrat", sans-serif;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-  color             : #27ae60;
-  border-color      : #27ae60;
-  outline           : none;
+  color       : #27ae60;
+  border-color: #27ae60;
+  outline     : none;
 }
 
 input,
@@ -217,7 +226,9 @@ select:-moz-focusring {
   color      : transparent;
   text-shadow: 0 0 0 #000;
 }
+
 /* Validation Styling */
+
 .required {
   position   : absolute;
   top        : 5%;
@@ -248,7 +259,9 @@ select:-moz-focusring {
   -ms-transition    : color 0.1s ease;
   transition        : color 0.4s ease;
 }
+
 /* Newsletter Section */
+
 .group-btn,
 .group-format,
 .group-interests {
@@ -271,15 +284,15 @@ select:-moz-focusring {
   text-align: justify;
 }
 
-.news-caption:nth-of-type(2) {
-  clear: left;
-}
+
 /* SHARED RADIO/CHECKBOX STYLING */
 /* Hide default radio and checkbox styling */
+
 input[type="checkbox"],
 input[type="radio" ] {
   display: none;
 }
+
 /* default label text styles */
 input[type="checkbox"] + label,
 input[type="radio" ] + label {
@@ -295,6 +308,7 @@ input[type="checkbox"] + label:hover,
 input[type="radio" ] + label:hover {
   cursor: pointer;
 }
+
 /* default checked style for label / button / checkbox */
 input[type="checkbox"]:checked + label,
 input[type="checkbox"]:checked + label > .check-box:before,
@@ -367,6 +381,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 }
 
 /* Marketing-info Section (How did you hear about us) */
+
 .marketing-info legend {
   margin-bottom: 30px;
 }
@@ -388,6 +403,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 }
 
 /*Social Icons*/
+
 .group-social {
   margin-top: 40px;
   text-align: center;
@@ -447,6 +463,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     margin-bottom: 0;
   }
 }
+
 /* Some Tablets & Small Desktop/Laptop Styles */
 @media (min-width: 768px) {
   .main-container {
@@ -468,6 +485,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     border-bottom-left-radius : 0.3em;
   }
 }
+
 /* Large Desktop Displays */
 @media (min-width: 1500px) {
   .contact-info .form-item:last-of-type {
