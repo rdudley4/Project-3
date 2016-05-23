@@ -19,6 +19,11 @@ a:hover { color: #27ae60; }
 a,
 a:hover { transition: color 0.2s ease; }
 
+.caption {
+  margin-top: 5px;
+  font-size : .65em;
+}
+
 /* Main-Header Styles */
 
 .main-header {
@@ -60,10 +65,11 @@ fieldset {
 }
 
 legend {
-  width     : 100%;
-  font-size : 1.125em;
-  text-align: center;
-  color     : #34495e;
+  width        : 100%;
+  margin-bottom: 30px;
+  font-size    : 1.125em;
+  text-align   : center;
+  color        : #34495e;
 }
 
 fieldset { margin-bottom: 60px; }
@@ -143,9 +149,19 @@ fieldset { margin-bottom: 60px; }
   transition        : background-color 0.4s ease, border-bottom 0.4s ease;
 }
 /* Set form-item positioning to relative, so we can position our validation spans (.required) */
-.contact-info .form-item { position: relative; }
+.contact-info .form-item {
+  position     : relative;
+  padding-top  : 24px;
+  margin-bottom: 20px;
+ }
 
-.contact-info label,
+ .contact-info .form-item label {
+   position: absolute;
+   top     : 0;
+   left    : 0;
+   display : inline-block;
+ }
+
 label[for="more-interests"] {
   display      : block;
   margin-top   : 20px;
@@ -158,7 +174,6 @@ label[for="more-interests"] {
 /* Base Input Styling */
 
 textarea {
-  width     : 100%;
   min-height: 143.8px;
   resize    : vertical;
 }
@@ -203,7 +218,7 @@ select:-moz-focusring {
 
 .required {
   position   : absolute;
-  top        : 5%;
+  top        : 0;
   right      : 0;
   font-size  : 0.75em;
   line-height: 1.75em;
@@ -220,6 +235,7 @@ select:-moz-focusring {
 
 .form-item input:invalid + .required,
 .form-item input:valid + .required,
+.contact-info .form-item:hover > label,
 .required {
   -webkit-transition: color 0.4s ease;
   -moz-transition   : color 0.4s ease;
@@ -241,6 +257,8 @@ select:-moz-focusring {
 
 .group-interests .form-item:last-of-type,
 .group-interests .form-item:nth-of-type(4) { width: 96.95px; }
+
+.news-caption:first-of-type { margin-top: 0; }
 
 .news-caption {
   margin-top: 20px;
@@ -400,7 +418,7 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 }
 
 /* Some Tablets & Small Desktop/Laptop Styles */
-@media (min-width: 768px) {
+@media (min-width: 760px) {
   .main-container {
     max-width    : 750px;
     margin       : 0 auto;
@@ -419,22 +437,80 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     border-bottom-right-radius: 0.3em;
     border-bottom-left-radius : 0.3em;
   }
+
+  .contact-info .form-item                    { overflow: hidden; }
+  .contact-info .form-item:not(:last-of-type) { margin-bottom: 20px; }
+
+  select,
+  .contact-info .form-item input { border-left: none; }
+
+  .contact-info .form-item > label {
+  position   : static;
+  display    : inline-block;
+  margin     : 0;
+  line-height: 54px;
+  text-align : center;
+}
+
+  input,
+  select {
+    float: right;
+    width: 85%;
+    border-top-left-radius   : 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .contact-info label {
+    float                    : left;
+    width                    : 15%;
+    color                    : #fff;
+    border-top               : 1px solid rgba(39, 174, 96, 0);
+    border-left              : 1px solid rgba(39, 174, 96, 0);
+    border-bottom            : 1px solid rgba(39, 174, 96, 0);
+    border-right             : none;
+    background-color         : rgba(39, 174, 96, 1);
+    border-top-left-radius   : 0.3em;
+    border-bottom-left-radius: 0.3em;
+  }
+
+  .form-item input:focus + label {
+    border-top   : 1px solid #27ae60;
+    border-left  : 1px solid #27ae60;
+    border-bottom: 1px solid #27ae60;
+  }
+
+
+  .form-item input:invalid + .required + label {
+    border-color    : tomato;
+    background-color: tomato;
+  }
+
+  .form-item input:valid + .required + label {
+    border-color    : #27ae60;
+    background-color: #27ae60;
+  }
+
+  .form-item input:focus + label,
+  .form-item input:invalid + .required + label,
+  .form-item input:valid + .required + label {
+    transition: border-color .6s ease, background-color .6s ease;
+  }
+
+
 }
 
 /* Large Desktop Displays */
 @media (min-width: 1500px) {
   .contact-info .form-item:last-of-type { clear: left; }
-  .contact-info .form-item              { width: 47.5%; }
   .contact-info                         { float: left; }
 
-  .main-container { max-width: 80%; }
+  .main-container { max-width   : 80%; }
   .newsletter     { padding-left: 2.5%; }
-  .required       { top: 21%; }
-  .signup         { padding: 50px; }
+  .signup         { padding     : 50px; }
 
   .contact-info,
   .newsletter {
-    max-width   : 50%;
+    width       : 100%;
     margin-right: 0;
     margin-left : 0;
   }
@@ -445,14 +521,33 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     border-right : 1px solid #ccc;
   }
 
-  .contact-info .form-item:nth-of-type(odd) {
-    float       : left;
-    margin-right: 2.5%;
+
+  .marketing-info {
+    padding-left: 2.5%;
   }
 
-  .contact-info .form-item:nth-of-type(even) {
-    float      : right;
-    margin-left: 2.5%;
+  .newsletter { position: relative; }
+
+  .border-left {
+    border-left: 1px solid #ccc;
+    position   : absolute;
+    left       : -1px;
+    bottom     : 0;
+    height     : 90.85px;
+  }
+
+  .contact-info,
+  .newsletter,
+  .marketing-info {
+    max-width: 50%;
+  }
+
+  .field-container {
+    max-width    : 1200px;
+    margin-left  : auto;
+    margin-right : auto;
+    margin-bottom: 60px;
+    overflow     : hidden;
   }
 
   .form-footer {
