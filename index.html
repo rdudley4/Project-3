@@ -26,221 +26,229 @@
 
     <form class="signup clearfix" action="index.html" method="post">
 
-      <fieldset class="contact-info">
+      <div class="field-container">
+        <fieldset class="contact-info">
 
-        <legend>
-          <i class="fa fa-home fa-2x" aria-hidden="true"></i> Contact Information
-        </legend>
-
-        <div class="form-item">
-          <label for="name">Name</label>
-          <input type="text" pattern="[a-zA-Z]+[\s][a-zA-Z]+" required id="name" name="user_name" placeholder="&#xf007;  Full Name">
-          <span class="required">Required</span>
-        </div>
-
-        <div class="form-item">
-          <label for="email">Email</label>
-          <input type="email" pattern=".{9,}" required id="email" name="user_email" placeholder="&#xf0e0;  Email Address">
-          <span class="required">Required</span>
-        </div>
-
-        <div class="form-item">
-          <label for="phone">Phone</label>
-          <input type="tel" pattern="\d{10,16}" maxlength="15" id="phone" name="user_phone" required placeholder="&#xf095;  Phone Number"><span class="required">Required</span>
-        </div>
-
-        <div class="form-item">
-          <label for="address">Address</label>
-          <input type="text" id="address" name="user_address" placeholder="&#xf018;  Street Address">
-        </div>
-
-        <div class="form-item">
-          <label for="city">City</label>
-          <input type="text" id="city" name="user_city" placeholder="&#xf0ac;  City of Residence">
-        </div>
-
-        <div class="form-item">
-          <label for="zip">Zip</label>
-          <input type="text" id="zip" name="user_zip" placeholder="&#xf041;  Zip Code">
-        </div>
-
-        <div class="form-item">
-
-          <label for="select-state">State</label>
-          <select id="select-state" name="user_state">
-            <option value="">&#xf278; Select your State</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Alaska</option>
-            <option value="AZ">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CT">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="DC">District Of Columbia</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="ID">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NJ">New Jersey</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Carolina</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="TX">Texas</option>
-            <option value="UT">Utah</option>
-            <option value="VT">Vermont</option>
-            <option value="VA">Virginia</option>
-            <option value="WA">Washington</option>
-            <option value="WV">West Virginia</option>
-            <option value="WI">Wisconsin</option>
-            <option value="WY">Wyoming</option>
-          </select>
-
-        </div>
-        <!-- END select-state FORM -->
-
-      </fieldset>
-      <!-- END FIELDSET contact-info -->
-
-      <fieldset class="newsletter">
-
-        <legend>
-          <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i> Newsletter
-        </legend>
-
-        <h2 class="news-caption">Select the newsletters you would like to receive from the choices below!</h2>
-
-        <div class="group-interests">
+          <legend>
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i> Contact Information
+          </legend>
 
           <div class="form-item">
-            <input id="option3" type="checkbox" name="field" value="option3">
-            <label for="option3"><span class="check-box"></span> Javascript</label>
+            <input type="text" pattern="[a-zA-Z]+[\s][a-zA-Z]+" required id="name" name="user_name" placeholder="&#xf007;  Full Name">
+            <span class="required">Required</span>
+            <label for="name">Name</label>
           </div>
 
           <div class="form-item">
-            <input id="option" type="checkbox" name="field" value="option">
-            <label for="option"><span class="check-box"></span> Design</label>
+            <input type="email" pattern=".{9,}" required id="email" name="user_email" placeholder="&#xf0e0;  Email Address">
+            <span class="required">Required</span>
+            <label for="email">Email</label>
           </div>
 
           <div class="form-item">
-            <input id="option2" type="checkbox" name="field" value="option2">
-            <label for="option2"><span class="check-box"></span> HTML</label>
+            <input type="tel" pattern="\d{10,16}" maxlength="15" id="phone" name="user_phone" required placeholder="&#xf095;  Phone Number"><span class="required">Required</span>
+            <label for="phone">Phone</label>
           </div>
 
           <div class="form-item">
-            <input id="option4" type="checkbox" name="field" value="option4">
-            <label for="option4"><span class="check-box"></span> CSS</label>
+            <input type="text" id="address" name="user_address" placeholder="&#xf018;  Street Address">
+            <label for="address">Address</label>
           </div>
 
           <div class="form-item">
-            <input id="option5" type="checkbox" name="field" value="option5">
-            <label for="option5"><span class="check-box"></span> Python</label>
+            <input type="text" id="city" name="user_city" placeholder="&#xf0ac;  City of Residence">
+            <label for="city">City</label>
           </div>
 
           <div class="form-item">
-            <input id="option6" type="checkbox" name="field" value="option6">
-            <label for="option6"><span class="check-box"></span> Ruby</label>
-          </div>
-
-        </div>
-        <!-- END group-interests -->
-
-
-        <h2 class="news-caption">Which format would you like us to send the newsletter in?</h2>
-
-        <div class="group-format">
-
-          <div class="form-item">
-            <input id="radio1" type="radio" name="radio" value="1">
-            <label for="radio1">
-              <span class="radio-bg">
-                <span class="radio-select"></span>
-              </span> HTML</label>
+            <input type="text" id="zip" name="user_zip" placeholder="&#xf041;  Zip Code">
+            <label for="zip">Zip</label>
           </div>
 
           <div class="form-item">
-            <input id="radio2" type="radio" name="radio" value="2">
-            <label for="radio2">
-              <span class="radio-bg">
-                <span class="radio-select"></span>
-              </span> Plain Text</label>
+
+            <label for="select-state">State</label>
+            <select id="select-state" name="user_state">
+              <option value="">&#xf278; Select your State</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District Of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+
+          </div>
+          <!-- END select-state FORM -->
+
+        </fieldset>
+        <!-- END FIELDSET contact-info -->
+
+        <fieldset class="newsletter">
+
+          <legend>
+            <i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i> Newsletter
+          </legend>
+
+          <h2 class="news-caption">Select the newsletters you would like to receive from the choices below!</h2>
+
+          <div class="group-interests">
+
+            <div class="form-item">
+              <input id="option3" type="checkbox" name="field" value="option3">
+              <label for="option3"><span class="check-box"></span> Javascript</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option" type="checkbox" name="field" value="option">
+              <label for="option"><span class="check-box"></span> Design</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option2" type="checkbox" name="field" value="option2">
+              <label for="option2"><span class="check-box"></span> HTML</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option4" type="checkbox" name="field" value="option4">
+              <label for="option4"><span class="check-box"></span> CSS</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option5" type="checkbox" name="field" value="option5">
+              <label for="option5"><span class="check-box"></span> Python</label>
+            </div>
+
+            <div class="form-item">
+              <input id="option6" type="checkbox" name="field" value="option6">
+              <label for="option6"><span class="check-box"></span> Ruby</label>
+            </div>
+
+          </div>
+          <!-- END group-interests -->
+
+
+          <h2 class="news-caption">Which format would you like us to send the newsletter in?</h2>
+
+          <div class="group-format">
+
+            <div class="form-item">
+              <input id="radio1" type="radio" name="radio" value="1">
+              <label for="radio1">
+                <span class="radio-bg">
+                  <span class="radio-select"></span>
+                </span> HTML</label>
+            </div>
+
+            <div class="form-item">
+              <input id="radio2" type="radio" name="radio" value="2">
+              <label for="radio2">
+                <span class="radio-bg">
+                  <span class="radio-select"></span>
+                </span> Plain Text</label>
+            </div>
+
+          </div>
+          <!-- END group-format -->
+
+          <div class="form-item">
+            <label for="more-interests">Other topics you'd like to hear about</label>
+            <textarea id="more-interests" name="user_interest_extra" placeholder="&#xf0e6; Let us know about other topics you might be interested in!"></textarea>
           </div>
 
-        </div>
-        <!-- END group-format -->
+        </fieldset>
+        <!-- END FIELDSET newsletter -->
 
-        <div class="form-item">
-          <label for="more-interests">Other topics you'd like to hear about</label>
-          <textarea id="more-interests" name="user_interest_extra" placeholder="&#xf0e6; Let us know about other topics you might be interested in!"></textarea>
-        </div>
+        <fieldset class="marketing-info">
 
-      </fieldset>
-      <!-- END FIELDSET newsletter -->
+          <span class="border-left"></span>
 
-      <fieldset class="marketing-info">
+          <legend>
+            <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i> How did you hear about us?
+            <p class="caption">(Select all that apply)</p>
+          </legend>
 
-        <legend>
-          <i class="fa fa-question-circle-o fa-2x" aria-hidden="true"></i> How did you hear about us?
-        </legend>
+          <div class="form-item">
+            <input id="mkt-reddit" type="checkbox" name="mkt-info" value="reddit">
+            <label for="mkt-reddit"><i class="fa fa-reddit fa-2x" aria-hidden="true"></i><span class="check-box"></span>Reddit</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-reddit" type="checkbox" name="mkt-info" value="reddit">
-          <label for="mkt-reddit"><i class="fa fa-reddit fa-2x" aria-hidden="true"></i><span class="check-box"></span>Reddit</label>
-        </div>
+          <div class="form-item">
+            <input id="mkt-twitter" type="checkbox" name="mkt-info" value="twitter">
+            <label for="mkt-twitter"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span class="check-box"></span>Friends</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-twitter" type="checkbox" name="mkt-info" value="twitter">
-          <label for="mkt-twitter"><i class="fa fa-users fa-2x" aria-hidden="true"></i><span class="check-box"></span>Friends</label>
-        </div>
+          <div class="form-item">
+            <input id="mkt-space-magic" type="checkbox" name="mkt-info" value="space-magic">
+            <label for="mkt-space-magic"><i class="fa fa-magic fa-2x" aria-hidden="true"></i><span class="check-box"></span>Magic</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-space-magic" type="checkbox" name="mkt-info" value="space-magic">
-          <label for="mkt-space-magic"><i class="fa fa-magic fa-2x" aria-hidden="true"></i><span class="check-box"></span>Magic</label>
-        </div>
+          <div class="form-item">
+            <input id="mkt-github" type="checkbox" name="mkt-info" value="github">
+            <label for="mkt-github"><i class="fa fa-github fa-2x" aria-hidden="true"></i><span class="check-box"></span>GitHub</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-github" type="checkbox" name="mkt-info" value="github">
-          <label for="mkt-github"><i class="fa fa-github fa-2x" aria-hidden="true"></i><span class="check-box"></span>GitHub</label>
-        </div>
+          <div class="form-item">
+            <input id="mkt-google" type="checkbox" name="mkt-info" value="google">
+            <label for="mkt-google"><i class="fa fa-google fa-2x" aria-hidden="true"></i><span class="check-box"></span>Google</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-google" type="checkbox" name="mkt-info" value="google">
-          <label for="mkt-google"><i class="fa fa-google fa-2x" aria-hidden="true"></i><span class="check-box"></span>Google</label>
-        </div>
+          <div class="form-item">
+            <input id="mkt-slack" type="checkbox" name="mkt-info" value="slack">
+            <label for="mkt-slack"><i class="fa fa-slack fa-2x" aria-hidden="true"></i><span class="check-box"></span>Slack</label>
+          </div>
 
-        <div class="form-item">
-          <input id="mkt-slack" type="checkbox" name="mkt-info" value="slack">
-          <label for="mkt-slack"><i class="fa fa-slack fa-2x" aria-hidden="true"></i><span class="check-box"></span>Slack</label>
-        </div>
+        </fieldset>
+        <!-- END FIELDSET marketing-info -->
+      </div>
+      <!-- END field-container -->
 
-      </fieldset>
-      <!-- END FIELDSET marketing-info -->
+
 
       <div class="group-btn">
         <button class="btn submit" type="submit">Sign Up</button>
