@@ -21,7 +21,7 @@ a:hover { transition: color 0.2s ease; }
 
 .caption {
   margin-top: 5px;
-  font-size: .65em;
+  font-size : .65em;
 }
 
 /* Main-Header Styles */
@@ -65,10 +65,11 @@ fieldset {
 }
 
 legend {
-  width     : 100%;
-  font-size : 1.125em;
-  text-align: center;
-  color     : #34495e;
+  width        : 100%;
+  margin-bottom: 30px;
+  font-size    : 1.125em;
+  text-align   : center;
+  color        : #34495e;
 }
 
 fieldset { margin-bottom: 60px; }
@@ -148,9 +149,19 @@ fieldset { margin-bottom: 60px; }
   transition        : background-color 0.4s ease, border-bottom 0.4s ease;
 }
 /* Set form-item positioning to relative, so we can position our validation spans (.required) */
-.contact-info .form-item { position: relative; }
+.contact-info .form-item {
+  position     : relative;
+  padding-top  : 24px;
+  margin-bottom: 20px;
+ }
 
-.contact-info label,
+ .contact-info .form-item label {
+   position: absolute;
+   top     : 0;
+   left    : 0;
+   display : inline-block;
+ }
+
 label[for="more-interests"] {
   display      : block;
   margin-top   : 20px;
@@ -174,7 +185,7 @@ textarea {
   height       : 56px;
   padding      : 15px;
   color        : #34495e;
-  border: 1px solid #ccc;
+  border       : 1px solid #ccc;
   border-radius: 0.3em;
   font-family  : "FontAwesome", "Montserrat", sans-serif;
 }
@@ -207,17 +218,14 @@ select:-moz-focusring {
 
 .required {
   position   : absolute;
-  top        : 5%;
+  top        : 0;
   right      : 0;
   font-size  : 0.75em;
   line-height: 1.75em;
 }
 
 .form-item input:invalid {
-  border-top: 1px solid tomato;
-  border-right: 1px solid tomato;
-  border-bottom: 1px solid tomato;
-  border-left: none;
+  border    : 1px solid tomato;
   box-shadow: none;
   color     : tomato;
 }
@@ -249,6 +257,8 @@ select:-moz-focusring {
 
 .group-interests .form-item:last-of-type,
 .group-interests .form-item:nth-of-type(4) { width: 96.95px; }
+
+.news-caption:first-of-type { margin-top: 0; }
 
 .news-caption {
   margin-top: 20px;
@@ -426,38 +436,27 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     margin-bottom             : 25px;
     border-bottom-right-radius: 0.3em;
     border-bottom-left-radius : 0.3em;
-    overflow: hidden;
   }
 
-  .contact-info legend { margin-bottom: 20px; }
+  .contact-info .form-item                    { overflow: hidden; }
+  .contact-info .form-item:not(:last-of-type) { margin-bottom: 20px; }
 
-  .contact-info .form-item { overflow: hidden; padding-top: 24px;}
-
-  .contact-info .form-item:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-
-  .contact-info .form-item input {
-    border-left: none;
-  }
+  select,
+  .contact-info .form-item input { border-left: none; }
 
   .contact-info .form-item > label {
+  position   : static;
   display    : inline-block;
   margin     : 0;
   line-height: 54px;
   text-align : center;
 }
 
-  .required {
-    top: 0;
-    right: 0;
-  }
-
   input,
   select {
     float: right;
     width: 85%;
-    border-top-left-radius: 0;
+    border-top-left-radius   : 0;
     border-bottom-left-radius: 0;
   }
 
@@ -505,13 +504,13 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
   .contact-info .form-item:last-of-type { clear: left; }
   .contact-info                         { float: left; }
 
-  .main-container { max-width: 80%; }
+  .main-container { max-width   : 80%; }
   .newsletter     { padding-left: 2.5%; }
-  .signup         { padding: 50px; }
+  .signup         { padding     : 50px; }
 
   .contact-info,
   .newsletter {
-    width: 100%;
+    width       : 100%;
     margin-right: 0;
     margin-left : 0;
   }
@@ -519,29 +518,36 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
   .contact-info {
     margin-bottom: 0;
     padding-right: 2.5%;
-    border-right: 1px solid #ccc;
+    border-right : 1px solid #ccc;
   }
 
 
   .marketing-info {
-    position: relative;
     padding-left: 2.5%;
   }
 
+  .newsletter { position: relative; }
+
   .border-left {
     border-left: 1px solid #ccc;
-    position: absolute;
-    left: -1px;
-    bottom: 0;
-    height: 90.85px;
+    position   : absolute;
+    left       : -1px;
+    bottom     : 0;
+    height     : 90.85px;
+  }
+
+  .contact-info,
+  .newsletter,
+  .marketing-info {
+    max-width: 50%;
   }
 
   .field-container {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width    : 1200px;
+    margin-left  : auto;
+    margin-right : auto;
     margin-bottom: 60px;
-    overflow: hidden;
+    overflow     : hidden;
   }
 
   .form-footer {
