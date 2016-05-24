@@ -165,6 +165,12 @@ fieldset { margin-bottom: 60px; }
    display : inline-block;
  }
 
+ .contact-info .form-item label > .fa {
+   display     : inline-block;
+   margin-right: 7.5px;
+   margin-left : 10px;
+ }
+
 label[for="more-interests"] {
   display      : block;
   margin-top   : 20px;
@@ -464,8 +470,11 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
   }
 
   .contact-info label {
+    position                 : relative;
     float                    : left;
     width                    : 15%;
+    height                   : 56px;
+    padding-top              : 9px;
     color                    : #fff;
     border-top               : 1px solid rgba(39, 174, 96, 0);
     border-left              : 1px solid rgba(39, 174, 96, 0);
@@ -474,6 +483,11 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
     background-color         : rgba(39, 174, 96, 1);
     border-top-left-radius   : 0.3em;
     border-bottom-left-radius: 0.3em;
+  }
+
+  .contact-info .form-item label > .fa {
+    display: block;
+    margin : 0 0 -15px;
   }
 
   .form-item input:focus + label {
