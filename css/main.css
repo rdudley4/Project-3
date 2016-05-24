@@ -20,7 +20,10 @@ a,
 a:hover { transition: color 0.2s ease; }
 
 .caption {
+  display: block;
   margin-top: 5px;
+  color: #34495e;
+  text-align: center;
   font-size : .65em;
 }
 
