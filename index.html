@@ -34,42 +34,41 @@
           </legend>
 
           <div class="form-item">
-            <input type="text" pattern="[a-zA-Z]+[\s][a-zA-Z]+" required id="name" name="user_name" placeholder="&#xf007;  Full Name">
+            <input type="text" pattern="[a-zA-Z]+[\s][a-zA-Z]+" required id="name" name="user_name" placeholder="Ex. 'Bob Mcbobberson'">
             <span class="required">Required</span>
-            <label for="name">Name</label>
+            <label for="name"><i class="fa fa-user" aria-hidden="true"></i> Name</label>
           </div>
 
           <div class="form-item">
-            <input type="email" pattern=".{9,}" required id="email" name="user_email" placeholder="&#xf0e0;  Email Address">
+            <input type="email" pattern=".{9,}" required id="email" name="user_email" placeholder="Ex. 'example@gmail.com'">
             <span class="required">Required</span>
-            <label for="email">Email</label>
+            <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i>Email</label>
           </div>
 
           <div class="form-item">
-            <input type="tel" pattern="\d{10,16}" maxlength="15" id="phone" name="user_phone" required placeholder="&#xf095;  Phone Number"><span class="required">Required</span>
-            <label for="phone">Phone</label>
+            <input type="tel" pattern="\d{10,16}" maxlength="15" id="phone" name="user_phone" required placeholder="Ex. '5556667777'"><span class="required">Required</span>
+            <label for="phone"><i class="fa fa-phone" aria-hidden="true"></i>Phone</label>
           </div>
 
           <div class="form-item">
-            <input type="text" id="address" name="user_address" placeholder="&#xf018;  Street Address">
-            <label for="address">Address</label>
+            <input type="text" id="address" name="user_address" placeholder="Ex. '123 Superkewl Lane'">
+            <label for="address"><i class="fa fa-road" aria-hidden="true"></i>Address</label>
           </div>
 
           <div class="form-item">
-            <input type="text" id="city" name="user_city" placeholder="&#xf0ac;  City of Residence">
-            <label for="city">City</label>
+            <input type="text" id="city" name="user_city" placeholder="Ex. 'New York City'">
+            <label for="city"><i class="fa fa-compass" aria-hidden="true"></i>City</label>
           </div>
 
           <div class="form-item">
-            <input type="text" id="zip" name="user_zip" placeholder="&#xf041;  Zip Code">
-            <label for="zip">Zip</label>
+            <input type="text" id="zip" name="user_zip" placeholder="Ex. '52625'">
+            <label for="zip"><i class="fa fa-map-marker" aria-hidden="true"></i>Zip</label>
           </div>
 
           <div class="form-item">
 
-            <label for="select-state">State</label>
+            <label for="select-state"><i class="fa fa-map" aria-hidden="true"></i>State</label>
             <select id="select-state" name="user_state">
-              <option value="">&#xf278; Select your State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
               <option value="AZ">Arizona</option>
