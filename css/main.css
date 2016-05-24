@@ -20,9 +20,9 @@ a,
 a:hover { transition: color 0.2s ease; }
 
 .caption {
-  display: block;
+  display   : block;
   margin-top: 5px;
-  color: #34495e;
+  color     : #34495e;
   text-align: center;
   font-size : .65em;
 }
@@ -228,12 +228,12 @@ select:-moz-focusring {
 }
 
 .form-item input:invalid {
-  border    : 1px solid tomato;
+  border    : 1px solid #ff5252;
   box-shadow: none;
-  color     : tomato;
+  color     : #ff5252;
 }
 
-.form-item input:invalid + .required { color: tomato; }
+.form-item input:invalid + .required { color: #ff5252; }
 .form-item input:valid + .required   { color: #27ae60; }
 
 .form-item input:invalid + .required,
@@ -484,8 +484,8 @@ input[type="radio"]:checked + label > .radio-bg > .radio-select {
 
 
   .form-item input:invalid + .required + label {
-    border-color    : tomato;
-    background-color: tomato;
+    border-color    : #ff5252;
+    background-color: #ff5252;
   }
 
   .form-item input:valid + .required + label {
